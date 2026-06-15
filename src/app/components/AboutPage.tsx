@@ -3,7 +3,7 @@ import { Award, Wrench, Users, ArrowRight } from "lucide-react";
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
 interface AboutPageProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, anchor?: string) => void;
 }
 
 const milestones = [

@@ -4,7 +4,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
 interface FAQPageProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, anchor?: string) => void;
 }
 
 const faqCategories = [

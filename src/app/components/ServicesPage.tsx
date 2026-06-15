@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
 interface ServicesPageProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, anchor?: string) => void;
+  anchor?: string;
 }
 
 const vitragesServices = [
@@ -74,7 +76,20 @@ function SectionDivider({ number, title }: { number: string; title: string }) {
   );
 }
 
-export function ServicesPage({ onNavigate }: ServicesPageProps) {
+export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
+  useEffect(() => {
+    if (!anchor) {
+      return;
+    }
+
+    const normalizedAnchor = anchor.replace(/^#/, "");
+    const targetElement = document.getElementById(normalizedAnchor);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [anchor]);
+
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif" }} className="pt-16">
       {/* Header */}
@@ -95,7 +110,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* Vitrages */}
-      <section className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
+      <section id="vitrages" className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
         <SectionDivider number="01" title="Vitrages" />
         <div className="flex flex-col gap-10">
           {vitragesServices.map((service, i) => (
@@ -134,7 +149,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* Optiques */}
-      <section className="py-20 bg-[#080f1d]">
+      <section id="optiques" className="py-20 bg-[#080f1d]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <SectionDivider number="02" title="Optiques" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -175,7 +190,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* Complémentaires */}
-      <section className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
+      <section id="complementaires" className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
         <SectionDivider number="03" title="Services complémentaires" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {complementairesServices.map((s) => (

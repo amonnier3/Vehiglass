@@ -1,10 +1,12 @@
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import logo from "../../imports/vehiglass_logo.png";
+import facebookIcon from "../../imports/facebook.svg";
+import instagramIcon from "../../imports/instagram.svg";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
 interface FooterProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, anchor?: string) => void;
 }
 
 export function Footer({ onNavigate }: FooterProps) {
@@ -76,6 +78,14 @@ export function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
                 <Clock size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
                 Lun – Ven : 10h – 19h
+              </li>
+              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+                <img src={instagramIcon} alt="Instagram Vehiglass" className="size-[16px]" />
+                vehiglass64
+              </li>
+              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+                <img src={facebookIcon} alt="facebook Vehiglass" className="size-[16px]" />
+                vehiglass64
               </li>
             </ul>
           </div>

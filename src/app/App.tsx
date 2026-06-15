@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./components/HomePage";
@@ -9,17 +9,38 @@ import { FAQPage } from "./components/FAQPage";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
+const pageRoutes: Record<Page, string> = {
+  home: "/",
+  services: "/services",
+  about: "/about",
+  contact: "/contact",
+  faq: "/faq",
+};
+
+function getPageFromPath(pathname: string): Page {
+  switch (pathname) {
+    case "/services":
+      return "services";
+    case "/about":
+      return "about";
+    case "/contact":
+      return "contact";
+    case "/faq":
+      return "faq";
+    default:
+      return "home";
+  }
+}
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>("home");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPage = getPageFromPath(location.pathname);
 
-  const handleNavigate = (page: Page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleNavigate = (page: Page, anchor?: string) => {
+    const normalizedAnchor = anchor ? anchor.replace(/^#/, "") : undefined;
+    navigate({ pathname: pageRoutes[page], hash: normalizedAnchor ? `#${normalizedAnchor}` : undefined });
   };
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [currentPage]);
 
   return (
     <div
@@ -29,11 +50,14 @@ export default function App() {
       <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
 
       <main>
-        {currentPage === "home" && <HomePage onNavigate={handleNavigate} />}
-        {currentPage === "services" && <ServicesPage onNavigate={handleNavigate} />}
-        {currentPage === "about" && <AboutPage onNavigate={handleNavigate} />}
-        {currentPage === "contact" && <ContactPage />}
-        {currentPage === "faq" && <FAQPage onNavigate={handleNavigate} />}
+        <Routes>
+          <Route path="/" element={<HomePage onNavigate={handleNavigate} />} />
+          <Route path="/services" element={<ServicesPage onNavigate={handleNavigate} anchor={location.hash} />} />
+          <Route path="/about" element={<AboutPage onNavigate={handleNavigate} />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/faq" element={<FAQPage onNavigate={handleNavigate} />} />
+          <Route path="*" element={<HomePage onNavigate={handleNavigate} />} />
+        </Routes>
       </main>
 
       <Footer onNavigate={handleNavigate} />

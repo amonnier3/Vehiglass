@@ -3,7 +3,7 @@ import { CheckCircle, ArrowRight, Star, Award, Clock, Users } from "lucide-react
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
 interface HomePageProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, anchor?: string) => void;
 }
 
 const engagements = [
@@ -200,23 +200,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 title: "Vitrages automobiles",
                 desc: "Pare-brise, glaces latérales, lunette arrière — remplacement toutes marques.",
                 alt: "Remplacement de vitrage automobile",
+                anchor: "#vitrages"
               },
               {
                 img: "https://images.unsplash.com/photo-1528964132366-4409d2d4a862?w=600&h=400&fit=crop&auto=format",
                 title: "Rénovation de phares",
                 desc: "Polissage et restauration des optiques pour retrouver éclat et sécurité.",
                 alt: "Rénovation de phare automobile",
+                anchor: "#optiques"
               },
               {
                 img: "https://images.unsplash.com/photo-1771340012319-0b4fca008b54?w=600&h=400&fit=crop&auto=format",
                 title: "Services complémentaires",
                 desc: "Calibrage ADAS, traitement hydrophobe, télépeage et bien plus.",
                 alt: "Services complémentaires garage",
+                anchor: "#complementaires"
               },
             ].map((card) => (
               <button
                 key={card.title}
-                onClick={() => onNavigate("services")}
+                onClick={() => onNavigate("services", card.anchor)}
                 className="group rounded-xl overflow-hidden bg-[#121e35] border border-[rgba(3,62,255,0.12)] hover:border-[#ff6c1d]/40 transition-all duration-300 text-left"
               >
                 <div className="relative h-48 overflow-hidden bg-[#1a2d4a]">

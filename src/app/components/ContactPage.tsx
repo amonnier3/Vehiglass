@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Mail, ArrowRight } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, ArrowRight, Facebook, Instagram, ThumbsUp } from "lucide-react";
 
 const hours = [
   { day: "Lundi", time: "10h00 – 19h00" },
@@ -139,6 +139,30 @@ export function ContactPage() {
                         </div>
                       );
                     })}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Réseaux sociaux */}
+            <div className="p-6 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)]">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-[#ff6c1d]/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <ThumbsUp size={18} className="text-[#ff6c1d]" />
+                </div>
+                <div>
+                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-xl uppercase mb-1">
+                    Réseaux sociaux
+                  </p>
+                  <div className="flex flex-col items-center gap-4 mt-2">
+                    <a href="https://www.facebook.com/vehiglass64" target="_blank" rel="noopener noreferrer" className="text-[#a0bcd4] hover:text-[#ff6c1d] transition-colors flex gap-1">
+                      <Facebook />
+                      vehiglass64
+                    </a>
+                    <a href="https://www.instagram.com/vehiglass64" target="_blank" rel="noopener noreferrer" className="text-[#a0bcd4] hover:text-[#ff6c1d] transition-colors flex gap-1">
+                      <Instagram />
+                      vehiglass64
+                    </a>
                   </div>
                 </div>
               </div>
