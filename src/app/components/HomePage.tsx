@@ -1,5 +1,4 @@
 import { CheckCircle, ArrowRight, Star, Award, Clock, Users } from "lucide-react";
-import logo from "../../imports/vehiglass_logo.png";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
@@ -72,16 +71,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
         {/* Decorative lines */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent" />
+          <div className="absolute top-2/9 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ff6c1d]/20 to-transparent" />
           <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ff6c1d]/10 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 lg:px-10 text-center">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <img src={logo} alt="Vehiglass" className="h-28 w-auto drop-shadow-2xl" />
-          </div>
-
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#ff6c1d]/40 bg-[#ff6c1d]/10 text-[#ff6c1d] text-xs tracking-widest uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#ff6c1d] animate-pulse" />
             Spécialiste vitrage automobile
@@ -202,7 +196,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                img: "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?w=600&h=400&fit=crop&auto=format",
+                img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
                 title: "Vitrages automobiles",
                 desc: "Pare-brise, glaces latérales, lunette arrière — remplacement toutes marques.",
                 alt: "Remplacement de vitrage automobile",
@@ -284,7 +278,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* CTA band */}
-      <section className="py-16 bg-[#033eff]">
+      <section className="py-16 bg-gradient-to-br from-[#033eff] to-[#ff6c1d]">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}

@@ -67,15 +67,15 @@ export function Footer({ onNavigate }: FooterProps) {
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
                 <MapPin size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
-                12 Route de Lyon, 69800 Saint-Priest
+                12 Rue de l'Ayguelongue, 64160 Morlaàs
               </li>
               <li className="flex items-center gap-3 text-sm text-[#7a9bbf]">
                 <Phone size={16} className="text-[#ff6c1d] shrink-0" />
-                04 78 12 34 56
+                06 58 13 04 52
               </li>
               <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
                 <Clock size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
-                Lun – Ven : 8h – 18h<br />Sam : 9h – 13h
+                Lun – Ven : 10h – 19h
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@ export function Footer({ onNavigate }: FooterProps) {
             © 2026 Vehiglass — Tous droits réservés
           </p>
           <p className="text-[#4a6a8a] text-xs">
-            Spécialiste vitrage automobile depuis 2008
+            Spécialiste vitrage automobile
           </p>
         </div>
       </div>

@@ -158,11 +158,10 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
                 <button
                   key={cat.category}
                   onClick={() => setActiveCategory(cat.category)}
-                  className={`shrink-0 lg:w-full text-left px-4 py-3 rounded-lg text-sm transition-all duration-200 ${
-                    activeCategory === cat.category
-                      ? "bg-[#ff6c1d]/15 text-[#ff6c1d] border border-[#ff6c1d]/30"
-                      : "text-[#7a9bbf] hover:text-white hover:bg-white/5 border border-transparent"
-                  }`}
+                  className={`shrink-0 lg:w-full text-left px-4 py-3 rounded-lg text-sm transition-all duration-200 ${activeCategory === cat.category
+                    ? "bg-[#ff6c1d]/15 text-[#ff6c1d] border border-[#ff6c1d]/30"
+                    : "text-[#7a9bbf] hover:text-white hover:bg-white/5 border border-transparent"
+                    }`}
                 >
                   {cat.category}
                   <span className="ml-2 text-xs opacity-60">({cat.items.length})</span>
@@ -219,13 +218,13 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#033eff]">
+      <section className="py-16 bg-gradient-to-br from-[#033eff] to-[#ff6c1d]">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-4xl md:text-5xl text-white uppercase mb-4">
             Encore des doutes ?
           </h2>
           <p className="text-blue-200 mb-8 text-base max-w-xl mx-auto">
-            Appelez-nous directement au <strong>04 78 12 34 56</strong> ou venez nous voir au garage. Nos techniciens répondent à toutes vos questions sans engagement.
+            Appelez-nous directement au <strong>06 58 13 04 52</strong> ou venez nous voir au garage. Nos techniciens répondent à toutes vos questions sans engagement.
           </p>
           <button
             onClick={() => onNavigate("contact")}

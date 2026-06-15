@@ -1,12 +1,12 @@
 import { Phone, MapPin, Clock, Mail, ArrowRight } from "lucide-react";
 
 const hours = [
-  { day: "Lundi", time: "8h00 – 18h00" },
-  { day: "Mardi", time: "8h00 – 18h00" },
-  { day: "Mercredi", time: "8h00 – 18h00" },
-  { day: "Jeudi", time: "8h00 – 18h00" },
-  { day: "Vendredi", time: "8h00 – 18h00" },
-  { day: "Samedi", time: "9h00 – 13h00" },
+  { day: "Lundi", time: "10h00 – 19h00" },
+  { day: "Mardi", time: "10h00 – 19h00" },
+  { day: "Mercredi", time: "10h00 – 19h00" },
+  { day: "Jeudi", time: "10h00 – 19h00" },
+  { day: "Vendredi", time: "10h00 – 19h00" },
+  { day: "Samedi", time: "Fermé" },
   { day: "Dimanche", time: "Fermé" },
 ];
 
@@ -61,13 +61,13 @@ export function ContactPage() {
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                     className="text-4xl text-white hover:text-[#ff6c1d] transition-colors"
                   >
-                    04 78 12 34 56
+                    06 58 13 04 52
                   </a>
                   <p className="text-[#7a9bbf] text-sm">Appel gratuit, pas de surcoût</p>
                 </div>
               </div>
               <p className="text-[#7a9bbf] text-sm">
-                Disponible du lundi au vendredi de 8h à 18h et le samedi de 9h à 13h.
+                Disponible du lundi au vendredi de 10h à 19h.
               </p>
             </div>
 
@@ -82,10 +82,10 @@ export function ContactPage() {
                     Adresse
                   </p>
                   <p className="text-[#a0bcd4] text-sm leading-relaxed">
-                    12 Route de Lyon<br />ZA Les Sables<br />69800 Saint-Priest
+                    12 Rue de l'Ayguelongue<br />64160 Morlaàs
                   </p>
                   <a
-                    href="https://maps.google.com"
+                    href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group"
@@ -108,7 +108,7 @@ export function ContactPage() {
                     Email
                   </p>
                   <a href="mailto:contact@vehiglass.fr" className="text-[#a0bcd4] text-sm hover:text-[#ff6c1d] transition-colors">
-                    contact@vehiglass.fr
+                    vehiglass64@gmail.com
                   </a>
                   <p className="text-[#7a9bbf] text-xs mt-1">Réponse sous 24h en jours ouvrés</p>
                 </div>
@@ -131,9 +131,8 @@ export function ContactPage() {
                       return (
                         <div
                           key={h.day}
-                          className={`flex justify-between text-sm py-1.5 border-b border-[rgba(3,62,255,0.06)] last:border-0 ${
-                            isToday ? "text-[#ff6c1d]" : h.time === "Fermé" ? "text-[#4a6a8a]" : "text-[#a0bcd4]"
-                          }`}
+                          className={`flex justify-between text-sm py-1.5 border-b border-[rgba(3,62,255,0.06)] last:border-0 ${isToday ? "text-[#ff6c1d]" : h.time === "Fermé" ? "text-[#4a6a8a]" : "text-[#a0bcd4]"
+                            }`}
                         >
                           <span className={isToday ? "font-semibold" : ""}>{h.day}</span>
                           <span>{h.time}</span>
@@ -163,10 +162,10 @@ export function ContactPage() {
                   <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-xl uppercase">
                     Vehiglass
                   </p>
-                  <p className="text-[#7a9bbf] text-sm">12 Route de Lyon, 69800 Saint-Priest</p>
+                  <p className="text-[#7a9bbf] text-sm">12 Rue de l'Ayguelongue, 64160 Morlaàs</p>
                 </div>
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-md bg-[#ff6c1d] text-white text-sm font-semibold hover:bg-[#ff8a47] transition-colors"

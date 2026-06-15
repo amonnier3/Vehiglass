@@ -217,7 +217,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#033eff]">
+      <section className="py-16 bg-gradient-to-br from-[#033eff] to-[#ff6c1d]">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-4xl md:text-5xl text-white uppercase mb-4">
             Venez nous rencontrer

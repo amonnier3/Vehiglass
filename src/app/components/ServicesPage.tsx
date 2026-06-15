@@ -11,14 +11,14 @@ const vitragesServices = [
     title: "Remplacement de pare-brise",
     desc: "Remplacement complet de votre pare-brise avec des vitrages homologués. Pose avec mastic polyuréthane haute résistance, délai de séchage respecté.",
     features: ["Toutes marques et modèles", "Verre homologué constructeur", "Calibrage caméra inclus si nécessaire", "Garantie 2 ans"],
-    img: "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?w=600&h=400&fit=crop&auto=format",
+    img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
     alt: "Remplacement pare-brise",
   },
   {
     title: "Glaces latérales",
     desc: "Remplacement de vos vitres de portières, vitres de custode ou de déflecteur. Vitrages trempés ou feuilletés selon spécification constructeur.",
     features: ["Vitres avant et arrière", "Compatibles lève-glaces", "Joints et agrafes inclus", "Intervention rapide"],
-    img: "https://images.unsplash.com/photo-1526459915562-c5ca724b1d02?w=600&h=400&fit=crop&auto=format",
+    img: "https://images.unsplash.com/photo-1773900225803-657359a1312a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Glace latérale voiture",
   },
   {
@@ -194,7 +194,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#033eff]">
+      <section className="py-16 bg-gradient-to-br from-[#033eff] to-[#ff6c1d]">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-4xl md:text-5xl text-white uppercase mb-4">
             Besoin d'un service sur mesure ?
