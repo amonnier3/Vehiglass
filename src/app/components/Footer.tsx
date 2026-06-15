@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import logo from "../../imports/vehiglass_logo.png";
 import facebookIcon from "../../imports/facebook.svg";
 import instagramIcon from "../../imports/instagram.svg";
