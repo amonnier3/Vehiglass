@@ -66,7 +66,7 @@ function SectionDivider({ number, title }: { number: string; title: string }) {
         <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-1">Catégorie {number}</p>
         <h2
           style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-          className="text-4xl md:text-5xl text-white uppercase"
+          className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
         >
           {title}
         </h2>
@@ -93,17 +93,17 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif" }} className="pt-16">
       {/* Header */}
-      <section className="py-20 bg-[#080f1d] relative overflow-hidden">
+      <section className="py-20 bg-[var(--vg-alt)] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 lg:px-10 text-center">
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Notre savoir-faire</p>
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-5xl md:text-7xl text-white uppercase mb-6"
+            className="text-5xl md:text-7xl text-[var(--vg-t1)] uppercase mb-6"
           >
             Nos services
           </h1>
-          <p className="text-[#7a9bbf] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[var(--vg-t3)] text-lg max-w-2xl mx-auto leading-relaxed">
             Des prestations complètes pour tous vos besoins en vitrage et optique automobile, réalisées par des techniciens certifiés.
           </p>
         </div>
@@ -116,20 +116,20 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
           {vitragesServices.map((service, i) => (
             <div
               key={service.title}
-              className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch rounded-xl overflow-hidden bg-[#121e35] border border-[rgba(3,62,255,0.12)]"
+              className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch rounded-xl overflow-hidden bg-[var(--vg-card)] border border-[var(--vg-b1)]"
             >
               <div className={`relative h-64 md:h-auto bg-[#1a2d4a] ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <img src={service.img} alt={service.alt} className="w-full h-full object-cover opacity-70" />
+                <img src={service.img} alt={service.alt} className="w-full h-full object-cover opacity-[var(--vg-img-op)]" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#121e35]/50 to-transparent" />
               </div>
               <div className={`p-8 ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-3xl uppercase mb-3">
+                <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-3xl text-[var(--vg-t1)] uppercase mb-3">
                   {service.title}
                 </h3>
-                <p className="text-[#7a9bbf] text-sm leading-relaxed mb-6">{service.desc}</p>
+                <p className="text-[var(--vg-t3)] text-sm leading-relaxed mb-6">{service.desc}</p>
                 <ul className="flex flex-col gap-2 mb-8">
                   {service.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-sm text-[#a0bcd4]">
+                    <li key={f} className="flex items-center gap-2.5 text-sm text-[var(--vg-t2)]">
                       <CheckCircle size={15} className="text-[#ff6c1d] shrink-0" />
                       {f}
                     </li>
@@ -149,27 +149,27 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
       </section>
 
       {/* Optiques */}
-      <section id="optiques" className="py-20 bg-[#080f1d]">
+      <section id="optiques" className="py-20 bg-[var(--vg-alt)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <SectionDivider number="02" title="Optiques" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {optiquesServices.map((service) => (
               <div
                 key={service.title}
-                className="rounded-xl overflow-hidden bg-[#121e35] border border-[rgba(3,62,255,0.12)] hover:border-[#ff6c1d]/30 transition-all duration-200 group"
+                className="rounded-xl overflow-hidden bg-[var(--vg-card)] border border-[var(--vg-b1)] hover:border-[#ff6c1d]/30 transition-all duration-200 group"
               >
-                <div className="relative h-52 bg-[#1a2d4a]">
-                  <img src={service.img} alt={service.alt} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+                <div className="relative h-52 bg-[var(--vg-input)]">
+                  <img src={service.img} alt={service.alt} className="w-full h-full object-cover opacity-[var(--vg-img-op)] group-hover:opacity-90 transition-opacity duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#121e35] to-transparent" />
                 </div>
                 <div className="p-7">
-                  <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-2xl uppercase mb-2">
+                  <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-2xl text-[var(--vg-t1)] uppercase mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-[#7a9bbf] text-sm leading-relaxed mb-5">{service.desc}</p>
+                  <p className="text-[var(--vg-t3)] text-sm leading-relaxed mb-5">{service.desc}</p>
                   <ul className="flex flex-col gap-1.5 mb-6">
                     {service.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-[#a0bcd4]">
+                      <li key={f} className="flex items-center gap-2 text-sm text-[var(--vg-t2)]">
                         <CheckCircle size={13} className="text-[#ff6c1d] shrink-0" />
                         {f}
                       </li>
@@ -196,13 +196,13 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
           {complementairesServices.map((s) => (
             <div
               key={s.title}
-              className="p-6 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)] hover:border-[#ff6c1d]/30 transition-all duration-200"
+              className="p-6 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)] hover:border-[#ff6c1d]/30 transition-all duration-200"
             >
               <div className="text-3xl mb-4">{s.icon}</div>
-              <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-xl uppercase mb-2">
+              <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-xl text-[var(--vg-t1)] uppercase mb-2">
                 {s.title}
               </h3>
-              <p className="text-[#7a9bbf] text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-[var(--vg-t3)] text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

@@ -99,12 +99,12 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-[rgba(3,62,255,0.1)] last:border-0">
+    <div className="border-b border-[var(--vg-b1)] last:border-0">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-start justify-between gap-4 py-5 text-left group"
       >
-        <span className="text-[#e8edf5] text-sm font-semibold leading-relaxed group-hover:text-[#ff6c1d] transition-colors">
+        <span className="text-[var(--vg-t1)] text-sm font-semibold leading-relaxed group-hover:text-[#ff6c1d] transition-colors">
           {question}
         </span>
         <ChevronDown
@@ -113,7 +113,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 pb-5" : "max-h-0"}`}>
-        <p className="text-[#7a9bbf] text-sm leading-relaxed">{answer}</p>
+        <p className="text-[var(--vg-t3)] text-sm leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -126,17 +126,17 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif" }} className="pt-16">
       {/* Header */}
-      <section className="py-20 bg-[#080f1d] relative overflow-hidden">
+      <section className="py-20 bg-[var(--vg-alt)] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 lg:px-10 text-center">
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Questions fréquentes</p>
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-5xl md:text-7xl text-white uppercase mb-6"
+            className="text-5xl md:text-7xl text-[var(--vg-t1)] uppercase mb-6"
           >
             FAQ
           </h1>
-          <p className="text-[#7a9bbf] text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-[var(--vg-t3)] text-lg max-w-xl mx-auto leading-relaxed">
             Retrouvez les réponses aux questions les plus fréquemment posées par nos clients.
           </p>
         </div>
@@ -149,7 +149,7 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
           <div className="lg:col-span-1">
             <p
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-              className="text-[#7a9bbf] uppercase tracking-widest text-xs mb-4"
+              className="text-[var(--vg-t3)] uppercase tracking-widest text-xs mb-4"
             >
               Thèmes
             </p>
@@ -160,7 +160,7 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
                   onClick={() => setActiveCategory(cat.category)}
                   className={`shrink-0 lg:w-full text-left px-4 py-3 rounded-lg text-sm transition-all duration-200 ${activeCategory === cat.category
                     ? "bg-[#ff6c1d]/15 text-[#ff6c1d] border border-[#ff6c1d]/30"
-                    : "text-[#7a9bbf] hover:text-white hover:bg-white/5 border border-transparent"
+                    : "text-[var(--vg-t3)] hover:text-[var(--vg-t1)] hover:bg-[var(--vg-t1)]/5 border border-transparent"
                     }`}
                 >
                   {cat.category}
@@ -169,8 +169,8 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
               ))}
             </div>
 
-            <div className="hidden lg:block mt-10 p-5 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)]">
-              <p className="text-[#7a9bbf] text-sm leading-relaxed mb-4">
+            <div className="hidden lg:block mt-10 p-5 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]">
+              <p className="text-[var(--vg-t3)] text-sm leading-relaxed mb-4">
                 Vous n'avez pas trouvé la réponse à votre question ?
               </p>
               <button
@@ -188,23 +188,23 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
             <div className="mb-8">
               <h2
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                className="text-3xl text-white uppercase mb-1"
+                className="text-3xl text-[var(--vg-t1)] uppercase mb-1"
               >
                 {current.category}
               </h2>
-              <p className="text-[#7a9bbf] text-sm">
+              <p className="text-[var(--vg-t3)] text-sm">
                 {current.items.length} question{current.items.length > 1 ? "s" : ""}
               </p>
             </div>
 
-            <div className="bg-[#121e35] rounded-xl border border-[rgba(3,62,255,0.12)] px-6">
+            <div className="bg-[var(--vg-card)] rounded-xl border border-[var(--vg-b1)] px-6">
               {current.items.map((item) => (
                 <FAQItem key={item.question} question={item.question} answer={item.answer} />
               ))}
             </div>
 
-            <div className="lg:hidden mt-8 p-5 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)]">
-              <p className="text-[#7a9bbf] text-sm mb-3">Vous n'avez pas trouvé la réponse à votre question ?</p>
+            <div className="lg:hidden mt-8 p-5 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]">
+              <p className="text-[var(--vg-t3)] text-sm mb-3">Vous n'avez pas trouvé la réponse à votre question ?</p>
               <button
                 onClick={() => onNavigate("contact")}
                 className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm hover:text-[#ff8a47] transition-colors group"

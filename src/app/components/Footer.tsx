@@ -13,7 +13,7 @@ export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer
       style={{ fontFamily: "'Nunito', sans-serif" }}
-      className="bg-[#080f1d] border-t border-[rgba(3,62,255,0.15)] pt-14 pb-8"
+      className="bg-[var(--vg-alt)] border-t border-[var(--vg-b1)] pt-14 pb-8"
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
@@ -22,7 +22,7 @@ export function Footer({ onNavigate }: FooterProps) {
             <button onClick={() => onNavigate("home")} className="mb-4 block">
               <img src={logo} alt="Vehiglass" className="h-14 w-auto" />
             </button>
-            <p className="text-[#7a9bbf] text-sm leading-relaxed">
+            <p className="text-[var(--vg-t3)] text-sm leading-relaxed">
               Votre spécialiste en vitrage automobile. Remplacement, réparation et rénovation pour tous types de véhicules.
             </p>
           </div>
@@ -48,7 +48,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   <li key={page}>
                     <button
                       onClick={() => onNavigate(page)}
-                      className="text-[#7a9bbf] hover:text-[#ff6c1d] text-sm transition-colors"
+                      className="text-[var(--vg-t3)] hover:text-[#ff6c1d] text-sm transition-colors"
                     >
                       {labels[page]}
                     </button>
@@ -67,23 +67,23 @@ export function Footer({ onNavigate }: FooterProps) {
               Contact
             </h4>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <MapPin size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
                 12 Rue de l'Ayguelongue, 64160 Morlaàs
               </li>
-              <li className="flex items-center gap-3 text-sm text-[#7a9bbf]">
+              <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <Phone size={16} className="text-[#ff6c1d] shrink-0" />
                 06 58 13 04 52
               </li>
-              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <Clock size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
                 Lun – Ven : 10h – 19h
               </li>
-              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={instagramIcon} alt="Instagram Vehiglass" className="size-[16px]" />
                 vehiglass64
               </li>
-              <li className="flex items-start gap-3 text-sm text-[#7a9bbf]">
+              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={facebookIcon} alt="facebook Vehiglass" className="size-[16px]" />
                 vehiglass64
               </li>
@@ -91,11 +91,11 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-[rgba(3,62,255,0.1)] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-[#4a6a8a] text-xs">
+        <div className="border-t border-[var(--vg-b1)] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-[var(--vg-t4)] text-xs">
             © 2026 Vehiglass — Tous droits réservés
           </p>
-          <p className="text-[#4a6a8a] text-xs">
+          <p className="text-[var(--vg-t4)] text-xs">
             Spécialiste vitrage automobile
           </p>
         </div>

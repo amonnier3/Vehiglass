@@ -30,7 +30,7 @@ const engagements = [
 ];
 
 const stats = [
-  { value: "15+", label: "Années d'expérience" },
+  { value: "100€", label: "Offert pour tout remplacement de pare-brise" },
   { value: "8 000+", label: "Clients satisfaits" },
   { value: "98%", label: "Taux de satisfaction" },
   { value: "2h", label: "Délai d'intervention moyen" },
@@ -118,7 +118,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Stats */}
-      <section className="py-14 bg-[#121e35] border-y border-[rgba(3,62,255,0.15)]">
+      <section className="py-14 bg-[var(--vg-stats)] border-y border-[var(--vg-stats-b)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
@@ -129,7 +129,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 >
                   {stat.value}
                 </p>
-                <p className="text-[#7a9bbf] text-sm">{stat.label}</p>
+                <p className="text-[var(--vg-t3)] text-sm">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -142,7 +142,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Nos engagements</p>
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-4xl md:text-5xl text-white uppercase"
+            className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
           >
             Ce qui nous distingue
           </h2>
@@ -152,7 +152,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           {engagements.map((item) => (
             <div
               key={item.title}
-              className="flex gap-5 p-6 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)] hover:border-[#ff6c1d]/30 transition-all duration-200 group"
+              className="flex gap-5 p-6 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)] hover:border-[#ff6c1d]/30 transition-all duration-200 group"
             >
               <div className="w-12 h-12 rounded-lg bg-[#ff6c1d]/10 flex items-center justify-center shrink-0 group-hover:bg-[#ff6c1d]/20 transition-colors">
                 {item.icon}
@@ -160,11 +160,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div>
                 <h3
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                  className="text-white text-xl uppercase mb-1"
+                  className="text-[var(--vg-t1)] text-xl uppercase mb-1"
                 >
                   {item.title}
                 </h3>
-                <p className="text-[#7a9bbf] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[var(--vg-t3)] text-sm leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -172,14 +172,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Services preview */}
-      <section className="py-20 bg-[#080f1d]">
+      <section className="py-20 bg-[var(--vg-alt)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
               <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Ce que nous faisons</p>
               <h2
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                className="text-4xl md:text-5xl text-white uppercase"
+                className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
               >
                 Nos prestations
               </h2>
@@ -220,24 +220,24 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <button
                 key={card.title}
                 onClick={() => onNavigate("services", card.anchor)}
-                className="group rounded-xl overflow-hidden bg-[#121e35] border border-[rgba(3,62,255,0.12)] hover:border-[#ff6c1d]/40 transition-all duration-300 text-left"
+                className="group rounded-xl overflow-hidden bg-[var(--vg-card)] border border-[var(--vg-b1)] hover:border-[#ff6c1d]/40 transition-all duration-300 text-left"
               >
-                <div className="relative h-48 overflow-hidden bg-[#1a2d4a]">
+                <div className="relative h-48 overflow-hidden bg-[var(--vg-input)]">
                   <img
                     src={card.img}
                     alt={card.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-[var(--vg-img-op)] group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#121e35]/80 to-transparent" />
                 </div>
                 <div className="p-5">
                   <h3
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                    className="text-white text-xl uppercase mb-2 group-hover:text-[#ff6c1d] transition-colors"
+                    className="text-[var(--vg-t1)] text-xl uppercase mb-2 group-hover:text-[#ff6c1d] transition-colors"
                   >
                     {card.title}
                   </h3>
-                  <p className="text-[#7a9bbf] text-sm leading-relaxed">{card.desc}</p>
+                  <p className="text-[var(--vg-t3)] text-sm leading-relaxed">{card.desc}</p>
                 </div>
               </button>
             ))}
@@ -251,7 +251,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Avis clients</p>
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-4xl md:text-5xl text-white uppercase"
+            className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
           >
             Ils nous font confiance
           </h2>
@@ -261,17 +261,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="p-6 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)]"
+              className="p-6 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]"
             >
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star key={i} size={14} className="text-[#ff6c1d] fill-[#ff6c1d]" />
                 ))}
               </div>
-              <p className="text-[#a0bcd4] text-sm leading-relaxed mb-5 italic">"{t.text}"</p>
+              <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5 italic">"{t.text}"</p>
               <p
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                className="text-white uppercase tracking-wide"
+                className="text-[var(--vg-t1)] uppercase tracking-wide"
               >
                 {t.name}
               </p>

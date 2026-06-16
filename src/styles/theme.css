@@ -1,5 +1,43 @@
 @custom-variant dark (&:is(.dark *));
 
+
+/* ── Vehiglass semantic theme tokens ── */
+.theme-dark {
+  --vg-page: #0d1526;
+  --vg-alt: #080f1d;
+  --vg-card: #121e35;
+  --vg-input: #1a2d4a;
+  --vg-t1: #e8edf5;
+  --vg-t2: #a0bcd4;
+  --vg-t3: #7a9bbf;
+  --vg-t4: #4a6a8a;
+  --vg-b1: rgba(3, 62, 255, 0.12);
+  --vg-b2: rgba(3, 62, 255, 0.25);
+  --vg-nav: rgba(13, 21, 38, 0.96);
+  --vg-nav-border: rgba(3, 62, 255, 0.2);
+  --vg-stats: #121e35;
+  --vg-stats-b: rgba(3, 62, 255, 0.15);
+  --vg-img-op: 0.7;
+}
+
+.theme-light {
+  --vg-page: #f3f6fb;
+  --vg-alt: #e8eef8;
+  --vg-card: #ffffff;
+  --vg-input: #eef2fa;
+  --vg-t1: #0d1a2e;
+  --vg-t2: #2c4a6a;
+  --vg-t3: #4a6a8a;
+  --vg-t4: #8aaac5;
+  --vg-b1: rgba(3, 62, 255, 0.1);
+  --vg-b2: rgba(3, 62, 255, 0.22);
+  --vg-nav: rgba(255, 255, 255, 0.97);
+  --vg-nav-border: rgba(3, 62, 255, 0.15);
+  --vg-stats: #ffffff;
+  --vg-stats-b: rgba(3, 62, 255, 0.12);
+  --vg-img-op: 0.85;
+}
+
 :root {
   --font-size: 16px;
   --background: #0d1526;
@@ -182,6 +220,7 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+    cursor: pointer;
   }
 
   input {

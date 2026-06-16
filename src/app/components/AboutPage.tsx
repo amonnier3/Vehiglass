@@ -37,17 +37,17 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif" }} className="pt-16">
       {/* Header */}
-      <section className="py-20 bg-[#080f1d] relative overflow-hidden">
+      <section className="py-20 bg-[var(--vg-alt)] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 lg:px-10 text-center">
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Notre histoire</p>
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-5xl md:text-7xl text-white uppercase mb-6"
+            className="text-5xl md:text-7xl text-[var(--vg-t1)] uppercase mb-6"
           >
             À propos
           </h1>
-          <p className="text-[#7a9bbf] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[var(--vg-t3)] text-lg max-w-2xl mx-auto leading-relaxed">
             Une passion pour l'automobile et un engagement envers la qualité depuis plus de 15 ans.
           </p>
         </div>
@@ -60,17 +60,17 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Le fondateur</p>
             <h2
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-              className="text-4xl md:text-5xl text-white uppercase mb-6"
+              className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase mb-6"
             >
               Marc Dupont
             </h2>
-            <p className="text-[#a0bcd4] text-sm leading-relaxed mb-5">
-              Passionné d'automobile depuis son plus jeune âge, Marc Dupont débute sa carrière comme technicien vitragiste en 2001 dans une grande enseigne nationale. Fort de 7 années d'expérience terrain, il décide en 2008 de créer <strong className="text-white">Vehiglass</strong>, avec l'ambition d'offrir un service de proximité alliant qualité professionnelle et relation humaine.
+            <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
+              Passionné d'automobile depuis son plus jeune âge, Marc Dupont débute sa carrière comme technicien vitragiste en 2001 dans une grande enseigne nationale. Fort de 7 années d'expérience terrain, il décide en 2008 de créer <strong style={{ color: "var(--vg-t1)" }}>Vehiglass</strong>, avec l'ambition d'offrir un service de proximité alliant qualité professionnelle et relation humaine.
             </p>
-            <p className="text-[#a0bcd4] text-sm leading-relaxed mb-5">
+            <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
               Sa philosophie est simple : traiter chaque véhicule comme s'il était le sien, et chaque client comme un ami à qui l'on donne le meilleur conseil.
             </p>
-            <p className="text-[#a0bcd4] text-sm leading-relaxed mb-8">
+            <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-8">
               Certifié par le GNFA, Marc forme régulièrement ses techniciens aux nouvelles technologies du vitrage embarqué : systèmes ADAS, caméras intégrées, connectivité numérique.
             </p>
             <div className="flex flex-col gap-3">
@@ -79,7 +79,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 "Agrément assurances tous réseaux",
                 "15+ années d'expertise sectorielle",
               ].map((cert) => (
-                <div key={cert} className="flex items-center gap-2.5 text-sm text-[#a0bcd4]">
+                <div key={cert} className="flex items-center gap-2.5 text-sm text-[var(--vg-t2)]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#ff6c1d] shrink-0" />
                   {cert}
                 </div>
@@ -87,11 +87,11 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-xl overflow-hidden bg-[#1a2d4a] h-96">
+            <div className="rounded-xl overflow-hidden bg-[var(--vg-input)] h-96">
               <img
                 src="https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=600&h=800&fit=crop&auto=format"
                 alt="Technicien Vehiglass au travail"
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover opacity-[var(--vg-img-op)]"
               />
             </div>
             <div className="absolute -bottom-5 -left-5 bg-[#ff6c1d] text-white rounded-xl p-5 shadow-xl shadow-[#ff6c1d]/20">
@@ -105,15 +105,15 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       </section>
 
       {/* Le garage */}
-      <section className="py-20 bg-[#080f1d]">
+      <section className="py-20 bg-[var(--vg-alt)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
             <div className="relative order-2 md:order-1">
-              <div className="rounded-xl overflow-hidden bg-[#1a2d4a] h-80">
+              <div className="rounded-xl overflow-hidden bg-[var(--vg-input)] h-80">
                 <img
                   src="https://images.unsplash.com/photo-1758767355046-1986dda2d967?w=600&h=500&fit=crop&auto=format"
                   alt="Garage Vehiglass"
-                  className="w-full h-full object-cover opacity-75"
+                  className="w-full h-full object-cover opacity-[var(--vg-img-op)]"
                 />
               </div>
             </div>
@@ -121,15 +121,15 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Notre atelier</p>
               <h2
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                className="text-4xl md:text-5xl text-white uppercase mb-6"
+                className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase mb-6"
               >
                 Le garage
               </h2>
-              <p className="text-[#a0bcd4] text-sm leading-relaxed mb-5">
-                Implanté à Saint-Priest depuis 2008, notre atelier de <strong className="text-white">450 m²</strong> est équipé des derniers outils de pose et de calibrage. Nous disposons de 4 ponts de travail permettant d'intervenir simultanément sur plusieurs véhicules.
+              <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
+                Implanté à Saint-Priest depuis 2008, notre atelier de <strong className="text-[var(--vg-t1)]">450 m²</strong> est équipé des derniers outils de pose et de calibrage. Nous disposons de 4 ponts de travail permettant d'intervenir simultanément sur plusieurs véhicules.
               </p>
-              <p className="text-[#a0bcd4] text-sm leading-relaxed mb-8">
-                Notre stock de vitrages couvre plus de <strong className="text-white">3 000 références</strong> — des modèles courants aux véhicules de collection. En cas de référence rare, un approvisionnement en 24h est possible.
+              <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-8">
+                Notre stock de vitrages couvre plus de <strong className="text-[var(--vg-t1)]">3 000 références</strong> — des modèles courants aux véhicules de collection. En cas de référence rare, un approvisionnement en 24h est possible.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -138,11 +138,11 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                   { val: "3 000+", label: "Références en stock" },
                   { val: "4", label: "Techniciens certifiés" },
                 ].map((stat) => (
-                  <div key={stat.label} className="p-4 rounded-lg bg-[#121e35] border border-[rgba(3,62,255,0.12)]">
+                  <div key={stat.label} className="p-4 rounded-lg bg-[var(--vg-card)] border border-[var(--vg-b1)]">
                     <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-[#ff6c1d] text-3xl mb-1">
                       {stat.val}
                     </p>
-                    <p className="text-[#7a9bbf] text-xs">{stat.label}</p>
+                    <p className="text-[var(--vg-t3)] text-xs">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -157,7 +157,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Chronologie</p>
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-4xl md:text-5xl text-white uppercase"
+            className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
           >
             Notre parcours
           </h2>
@@ -177,7 +177,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-[#ff6c1d] text-xl mb-1">
                   {m.year}
                 </p>
-                <p className="text-[#a0bcd4] text-sm leading-relaxed">{m.event}</p>
+                <p className="text-[var(--vg-t2)] text-sm leading-relaxed">{m.event}</p>
               </div>
             </div>
           ))}
@@ -185,13 +185,13 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       </section>
 
       {/* Valeurs */}
-      <section className="py-20 bg-[#080f1d]">
+      <section className="py-20 bg-[var(--vg-alt)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="text-center mb-14">
             <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Ce qui nous guide</p>
             <h2
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-              className="text-4xl md:text-5xl text-white uppercase"
+              className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
             >
               Nos valeurs
             </h2>
@@ -201,15 +201,17 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="p-8 rounded-xl bg-[#121e35] border border-[rgba(3,62,255,0.12)] text-center hover:border-[#ff6c1d]/30 transition-all duration-200"
+                className="p-8 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)] text-center hover:border-[#ff6c1d]/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 rounded-full bg-[#ff6c1d]/10 flex items-center justify-center mx-auto mb-5">
                   {v.icon}
                 </div>
-                <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-white text-2xl uppercase mb-3">
+                <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-[var(--vg-t1)]text-2xl uppercase mb-3">
                   {v.title}
                 </h3>
-                <p className="text-[#7a9bbf] text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-[var(--vg-t3)] text-sm leading-relaxed">
+                  {v.desc}
+                </p>
               </div>
             ))}
           </div>
