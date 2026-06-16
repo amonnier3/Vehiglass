@@ -38,7 +38,7 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPage = getPageFromPath(location.pathname);
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   // Scroll vers le haut quand il n'y a pas d'ancre
   useEffect(() => {
