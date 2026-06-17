@@ -79,11 +79,11 @@ export function Footer({ onNavigate }: FooterProps) {
                 <Clock size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
                 Lun – Ven : 10h – 19h
               </li>
-              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
+              <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={instagramIcon} alt="Instagram Vehiglass" className="size-[16px]" />
                 vehiglass64
               </li>
-              <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
+              <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={facebookIcon} alt="facebook Vehiglass" className="size-[16px]" />
                 vehiglass64
               </li>

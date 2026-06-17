@@ -90,9 +90,9 @@ export function ContactPage() {
             {/* Address */}
             <InfoCard icon={<MapPin size={18} className="text-[#ff6c1d]" />} title="Adresse">
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed">
-                12 Route de Lyon<br />ZA Les Sables<br />69800 Saint-Priest
+                12 Rue de l'Ayguelongue<br />64160 Morlaàs
               </p>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
+              <a href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
                 Ouvrir dans Google Maps
                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
@@ -100,8 +100,8 @@ export function ContactPage() {
 
             {/* Email */}
             <InfoCard icon={<Mail size={18} className="text-[#ff6c1d]" />} title="Email">
-              <a href="mailto:contact@vehiglass.fr" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
-                contact@vehiglass.fr
+              <a href="mailto:vehiglass64@gmail.com" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
+                vehiglass64@gmail.com
               </a>
               <p style={{ color: "var(--vg-t3)" }} className="text-xs mt-1">Réponse sous 24h en jours ouvrés</p>
             </InfoCard>
