@@ -1,7 +1,7 @@
 
-  # Redesign Vehiglass Website
+  # Vehiglass Website
 
-  This is a code bundle for Redesign Vehiglass Website. The original project is available at https://www.figma.com/design/x6EPVMTYbchHNtz1AmaKMy/Redesign-Vehiglass-Website.
+  This is a code bundle for Vehiglass Website.
 
   ## Running the code
 

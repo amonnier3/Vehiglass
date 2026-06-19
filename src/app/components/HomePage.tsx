@@ -30,27 +30,27 @@ const engagements = [
 ];
 
 const stats = [
-  { value: "100€", label: "Offert pour tout remplacement de pare-brise" },
-  { value: "8 000+", label: "Clients satisfaits" },
+  { value: "100€", label: "Offert pour tout remplacement de pare-brise*" },
   { value: "98%", label: "Taux de satisfaction" },
+  { value: "0€", label: "Franchise offerte*" },
   { value: "2h", label: "Délai d'intervention moyen" },
 ];
 
 const testimonials = [
   {
-    name: "Marie L.",
+    name: "Clément B.",
     rating: 5,
-    text: "Remplacement de pare-brise réalisé en moins de 2h, personnel très professionnel et prix compétitif. Je recommande vivement !",
+    text: "Très aimable et très bonne prestation, je recommande fortement. Merci pour l'accueil et le service.",
   },
   {
-    name: "Thomas R.",
+    name: "Jamal E. T.",
     rating: 5,
-    text: "Rénovation des phares de ma berline : résultat bluffant ! On dirait un véhicule neuf. Merci à l'équipe Vehiglass.",
+    text: "Relation client impeccable, niveau réactivité rien à dire. Je recommande vivement !",
   },
   {
-    name: "Sandrine M.",
+    name: "Valérie V.",
     rating: 5,
-    text: "Devis rapide, rendez-vous obtenu le lendemain. Équipe à l'écoute et travail soigné. Très satisfaite.",
+    text: "Très bonne prestation pour un changement de pare-brise,  je recommande ce technicien.",
   },
 ];
 
@@ -91,7 +91,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
           <p className="text-[#a0bcd4] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
             Vehiglass vous accompagne pour tout remplacement ou réparation de vitrage automobile.
-            Intervention rapide, résultat impeccable, prix transparents.
+            Intervention rapide et qualitative.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -134,6 +134,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             ))}
           </div>
         </div>
+        <span className="text-[var(--vg-t3)] text-sm absolute right-[1rem] mt-[2rem]">*Voir condition avec le garage</span>
       </section>
 
       {/* Engagements & valeurs */}

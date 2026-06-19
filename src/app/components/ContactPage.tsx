@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Mail, ArrowRight, Facebook, Instagram, ThumbsUp } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 const hours = [
   { day: "Lundi", time: "10h00 – 19h00" },
@@ -90,7 +91,7 @@ export function ContactPage() {
             {/* Address */}
             <InfoCard icon={<MapPin size={18} className="text-[#ff6c1d]" />} title="Adresse">
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed">
-                12 Route de Lyon<br />ZA Les Sables<br />69800 Saint-Priest
+                12 Rue de l'Ayguelongue<br />64160 Morlaàs
               </p>
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
                 Ouvrir dans Google Maps
@@ -100,8 +101,8 @@ export function ContactPage() {
 
             {/* Email */}
             <InfoCard icon={<Mail size={18} className="text-[#ff6c1d]" />} title="Email">
-              <a href="mailto:contact@vehiglass.fr" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
-                contact@vehiglass.fr
+              <a href="mailto:vehiglass64@gmail.com" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
+                vehiglass64@gmail.com
               </a>
               <p style={{ color: "var(--vg-t3)" }} className="text-xs mt-1">Réponse sous 24h en jours ouvrés</p>
             </InfoCard>
@@ -180,81 +181,11 @@ export function ContactPage() {
             <div className="p-8 rounded-xl border border-[var(--vg-b1)] bg-[var(--vg-card)]">
               <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Formulaire</p>
               <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-3xl text-[var(--vg-t1)] uppercase mb-6">
-                Demande de devis
+                Demande de rendez-vous
               </h3>
 
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert("Votre demande a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.");
-                }}
-                className="flex flex-col gap-4"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Prénom</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Marc"
-                      className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Nom</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Dupont"
-                      className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Téléphone</label>
-                  <input
-                    type="tel"
-                    placeholder="06 12 34 56 78"
-                    className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Type de véhicule</label>
-                  <input
-                    type="text"
-                    placeholder="Ex : Renault Clio 2021"
-                    className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Service souhaité</label>
-                  <select className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm focus:outline-none focus:border-[#ff6c1d] transition-colors">
-                    <option value="">Sélectionner un service</option>
-                    <option>Remplacement pare-brise</option>
-                    <option>Remplacement glace latérale</option>
-                    <option>Remplacement lunette arrière</option>
-                    <option>Rénovation phares</option>
-                    <option>Remplacement phares</option>
-                    <option>Calibrage ADAS</option>
-                    <option>Autre</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">Message (optionnel)</label>
-                  <textarea
-                    rows={3}
-                    placeholder="Décrivez votre situation..."
-                    className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-lg bg-[#ff6c1d] text-white font-semibold hover:bg-[#ff8a47] transition-colors flex items-center justify-center gap-2 group mt-2"
-                >
-                  Envoyer ma demande
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-              </form>
+              <ContactForm />
+
             </div>
           </div>
         </div>

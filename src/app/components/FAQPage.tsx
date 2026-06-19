@@ -42,7 +42,7 @@ const faqCategories = [
       },
       {
         question: "Le remplacement de vitrage affecte-t-il la garantie de mon véhicule ?",
-        answer: "Non, si la pose est réalisée par un professionnel certifié et avec des pièces homologuées. Vehiglass est agréé par les principaux constructeurs et assureurs.",
+        answer: "Non, si la pose est réalisée par un professionnel certifié et avec des pièces homologuées.",
       },
     ],
   },

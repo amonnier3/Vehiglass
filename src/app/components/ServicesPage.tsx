@@ -11,7 +11,7 @@ interface ServicesPageProps {
 const vitragesServices = [
   {
     title: "Remplacement de pare-brise",
-    desc: "Remplacement complet de votre pare-brise avec des vitrages homologués. Pose avec mastic polyuréthane haute résistance, délai de séchage respecté.",
+    desc: "Remplacement complet de votre pare-brise avec des vitrages homologués. Pose avec mastic polyuréthane haute résistance.",
     features: ["Toutes marques et modèles", "Verre homologué constructeur", "Calibrage caméra inclus si nécessaire", "Garantie 2 ans"],
     img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
     alt: "Remplacement pare-brise",
@@ -27,7 +27,7 @@ const vitragesServices = [
     title: "Lunette arrière",
     desc: "Remplacement de la lunette arrière avec ou sans dégivrage intégré. Reconnexion du réseau chauffant incluse.",
     features: ["Dégivrage préservé", "Antenne intégrée si équipé", "Vitrage homologué", "Pose étanche garantie"],
-    img: "https://images.unsplash.com/photo-1666009419871-c8bee023574e?w=600&h=400&fit=crop&auto=format",
+    img: "https://images.unsplash.com/photo-1751615713841-6468b0a2441e?w=600&h=400&auto=format&fit=crop",
     alt: "Lunette arrière automobile",
   },
 ];
@@ -53,7 +53,7 @@ const complementairesServices = [
   { icon: "🔧", title: "Calibrage ADAS", desc: "Recalibrage des systèmes d'aide à la conduite après remplacement de pare-brise." },
   { icon: "💧", title: "Traitement hydrophobe", desc: "Application d'un traitement hydrophobe pour améliorer la visibilité par temps de pluie." },
   { icon: "📡", title: "Pose de télépeage", desc: "Installation professionnelle de badge télépéage sur votre pare-brise." },
-  { icon: "🛡️", title: "Film anti-éclats", desc: "Protection de votre vitrage par film transparent anti-éclats." },
+  { icon: "📱", title: "Pose de CarPlay", desc: "Installation professionnelle de CarPlay sans fil ou filaire sur votre pare-brise." },
   { icon: "🔍", title: "Diagnostic vitrage", desc: "Évaluation complète de l'état de vos vitrages, gratuitement." },
   { icon: "🚗", title: "Véhicule de courtoisie", desc: "Mise à disposition d'un véhicule de courtoisie gratuit pendant l'intervention." },
 ];
@@ -139,7 +139,7 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
                   onClick={() => onNavigate("contact")}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#ff6c1d] text-white text-sm font-semibold hover:bg-[#ff8a47] transition-colors group"
                 >
-                  Obtenir un devis
+                  Obtenir un rendez-vous
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

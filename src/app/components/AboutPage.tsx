@@ -6,15 +6,6 @@ interface AboutPageProps {
   onNavigate: (page: Page, anchor?: string) => void;
 }
 
-const milestones = [
-  { year: "2008", event: "Fondation de Vehiglass à Saint-Priest par Marc Dupont" },
-  { year: "2012", event: "Extension du garage et ouverture d'un second atelier spécialisé" },
-  { year: "2016", event: "Obtention de la certification professionnelle GNFA vitrage" },
-  { year: "2019", event: "Intégration des prestations ADAS et technologies embarquées" },
-  { year: "2023", event: "Lancement de la rénovation d'optiques et passage à 4 techniciens" },
-  { year: "2025", event: "Cap des 8 000 clients satisfaits franchi" },
-];
-
 const values = [
   {
     icon: <Award size={22} className="text-[#ff6c1d]" />,
@@ -48,7 +39,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             À propos
           </h1>
           <p className="text-[var(--vg-t3)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Une passion pour l'automobile et un engagement envers la qualité depuis plus de 15 ans.
+            Une passion pour l'automobile et un engagement envers la qualité depuis plus de 10 ans.
           </p>
         </div>
       </section>
@@ -62,22 +53,21 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase mb-6"
             >
-              Marc Dupont
+              Charles Thébaud
             </h2>
             <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
-              Passionné d'automobile depuis son plus jeune âge, Marc Dupont débute sa carrière comme technicien vitragiste en 2001 dans une grande enseigne nationale. Fort de 7 années d'expérience terrain, il décide en 2008 de créer <strong style={{ color: "var(--vg-t1)" }}>Vehiglass</strong>, avec l'ambition d'offrir un service de proximité alliant qualité professionnelle et relation humaine.
+              Passionné d'automobile depuis mon plus jeune âge, je débute ma carrière comme technicien vitrage en 2017 dans une grande enseigne nationale. Fort de 7 années d'expérience terrain, ainsi qu'une expérience de 2 ans en tant qu'expert automobile, je décide en 2025 de créer <strong style={{ color: "var(--vg-t1)" }}>Vehiglass</strong>, avec l'ambition d'offrir un service de proximité alliant qualité professionnelle et relation humaine.
             </p>
             <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
-              Sa philosophie est simple : traiter chaque véhicule comme s'il était le sien, et chaque client comme un ami à qui l'on donne le meilleur conseil.
+              Ma philosophie est simple : traiter chaque véhicule comme s'il était le mien, et chaque client comme un ami à qui je donne la meilleur qualité de service.
             </p>
             <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-8">
-              Certifié par le GNFA, Marc forme régulièrement ses techniciens aux nouvelles technologies du vitrage embarqué : systèmes ADAS, caméras intégrées, connectivité numérique.
+              Certifié par le GNFA, je suis formé régulièrement aux nouvelles technologies du vitrage embarqué : systèmes ADAS, caméras intégrées, connectivité numérique.
             </p>
             <div className="flex flex-col gap-3">
               {[
                 "Certification GNFA vitrage automobile",
-                "Agrément assurances tous réseaux",
-                "15+ années d'expertise sectorielle",
+                "10+ années d'expertise sectorielle",
               ].map((cert) => (
                 <div key={cert} className="flex items-center gap-2.5 text-sm text-[var(--vg-t2)]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#ff6c1d] shrink-0" />
@@ -96,7 +86,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             </div>
             <div className="absolute -bottom-5 -left-5 bg-[#ff6c1d] text-white rounded-xl p-5 shadow-xl shadow-[#ff6c1d]/20">
               <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-4xl font-bold leading-none">
-                15+
+                10+
               </p>
               <p className="text-xs font-semibold leading-tight mt-1">années<br />d'expérience</p>
             </div>
@@ -126,17 +116,15 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 Le garage
               </h2>
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-5">
-                Implanté à Saint-Priest depuis 2008, notre atelier de <strong className="text-[var(--vg-t1)]">450 m²</strong> est équipé des derniers outils de pose et de calibrage. Nous disposons de 4 ponts de travail permettant d'intervenir simultanément sur plusieurs véhicules.
+                Implanté à Morlaas, zone de Berlanne, depuis 2025, mon atelier de <strong className="text-[var(--vg-t1)]">200 m²</strong> est équipé des derniers outils de pose et de calibrage.
               </p>
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed mb-8">
-                Notre stock de vitrages couvre plus de <strong className="text-[var(--vg-t1)]">3 000 références</strong> — des modèles courants aux véhicules de collection. En cas de référence rare, un approvisionnement en 24h est possible.
+                Notre stock de vitrages couvre plus de <strong className="text-[var(--vg-t1)]">3 000 références</strong> — des modèles courants aux véhicules de collection, en passant également par les véhicules poids lourd et l'agricole.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { val: "450 m²", label: "Surface atelier" },
-                  { val: "4", label: "Ponts de travail" },
+                  { val: "200 m²", label: "Surface atelier" },
                   { val: "3 000+", label: "Références en stock" },
-                  { val: "4", label: "Techniciens certifiés" },
                 ].map((stat) => (
                   <div key={stat.label} className="p-4 rounded-lg bg-[var(--vg-card)] border border-[var(--vg-b1)]">
                     <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-[#ff6c1d] text-3xl mb-1">
@@ -151,41 +139,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
-        <div className="text-center mb-14">
-          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Chronologie</p>
-          <h2
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
-          >
-            Notre parcours
-          </h2>
-        </div>
-
-        <div className="max-w-2xl mx-auto flex flex-col gap-0">
-          {milestones.map((m, i) => (
-            <div key={m.year} className="flex gap-5 items-start">
-              {/* Line + dot */}
-              <div className="flex flex-col items-center w-10 shrink-0">
-                <div className="w-3 h-3 rounded-full bg-[#ff6c1d] shrink-0 mt-1.5 ring-4 ring-[#ff6c1d]/15" />
-                {i < milestones.length - 1 && (
-                  <div className="w-px flex-1 min-h-8 bg-gradient-to-b from-[#ff6c1d]/40 to-[#033eff]/20 mt-1" />
-                )}
-              </div>
-              <div className="pb-8">
-                <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-[#ff6c1d] text-xl mb-1">
-                  {m.year}
-                </p>
-                <p className="text-[var(--vg-t2)] text-sm leading-relaxed">{m.event}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Valeurs */}
-      <section className="py-20 bg-[var(--vg-alt)]">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="text-center mb-14">
             <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Ce qui nous guide</p>
@@ -225,7 +180,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             Venez nous rencontrer
           </h2>
           <p className="text-blue-200 mb-8">
-            Notre équipe est disponible du lundi au samedi pour répondre à vos questions.
+            Notre équipe est disponible du lundi au vendredi pour répondre à vos questions.
           </p>
           <button
             onClick={() => onNavigate("contact")}
