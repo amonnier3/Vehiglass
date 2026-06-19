@@ -93,7 +93,7 @@ export function ContactPage() {
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed">
                 12 Rue de l'Ayguelongue<br />64160 Morlaàs
               </p>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
+              <a href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
                 Ouvrir dans Google Maps
                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
