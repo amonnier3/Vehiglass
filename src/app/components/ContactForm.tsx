@@ -73,7 +73,7 @@ export function ContactForm() {
                 emailData
             );
 
-            // Envoyer l'email à l'admin (optionnel, si vous avez configuré un template admin)
+            // Envoyer l'email à l'admin
             if (EMAILJS_CONFIG.ADMIN_TEMPLATE_ID !== "YOUR_ADMIN_TEMPLATE_ID") {
                 await emailjs.send(
                     EMAILJS_CONFIG.SERVICE_ID,

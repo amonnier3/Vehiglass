@@ -152,8 +152,8 @@ export function ContactPage() {
             {/* Map placeholder */}
             <div className="rounded-xl overflow-hidden border border-[var(--vg-b1)] h-64 bg-[var(--vg-card)] relative">
               <img
-                src="https://images.unsplash.com/photo-1779808109842-3be1f06929a7?w=800&h=400&fit=crop&auto=format"
-                alt="Localisation garage Vehiglass"
+                src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=800&h=400&fit=crop&auto=format"
+                alt="Localisation garage Vehiglass à Pau"
                 className="w-full h-full object-cover opacity-25"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">

@@ -31,7 +31,7 @@ const engagements = [
 
 const stats = [
   { value: "100€", label: "Offert pour tout remplacement de pare-brise*" },
-  { value: "98%", label: "Taux de satisfaction" },
+  { value: "100%", label: "Taux de satisfaction" },
   { value: "0€", label: "Franchise offerte*" },
   { value: "2h", label: "Délai d'intervention moyen" },
 ];
@@ -200,21 +200,21 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
                 title: "Vitrages automobiles",
                 desc: "Pare-brise, glaces latérales, lunette arrière — remplacement toutes marques.",
-                alt: "Remplacement de vitrage automobile",
+                alt: "Remplacement de vitrage automobile à Pau",
                 anchor: "#vitrages"
               },
               {
                 img: "https://images.unsplash.com/photo-1528964132366-4409d2d4a862?w=600&h=400&fit=crop&auto=format",
                 title: "Rénovation de phares",
                 desc: "Polissage et restauration des optiques pour retrouver éclat et sécurité.",
-                alt: "Rénovation de phare automobile",
+                alt: "Rénovation de phare automobile à Pau",
                 anchor: "#optiques"
               },
               {
                 img: "https://images.unsplash.com/photo-1771340012319-0b4fca008b54?w=600&h=400&fit=crop&auto=format",
                 title: "Services complémentaires",
                 desc: "Calibrage ADAS, traitement hydrophobe, télépeage et bien plus.",
-                alt: "Services complémentaires garage",
+                alt: "Services complémentaires du garage à Pau",
                 anchor: "#complementaires"
               },
             ].map((card) => (
@@ -279,6 +279,18 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
           ))}
         </div>
+
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://www.google.com/maps/place/Vehiglass/@43.32579,-0.3057327,17z/data=!3m1!4b1!4m6!3m5!1s0xd56496c58f7b5ed:0x1a3765d16a47dfd7!8m2!3d43.32579!4d-0.3031578!16s%2Fg%2F11mm082dm3?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-[var(--primary)] bg-white/5 text-[var(--primary)] font-semibold hover:border-[var(--primary)]/60 hover:bg-[var(--primary)]/5 transition-colors group"
+          >
+            Laisser un avis Google
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </section>
 
       {/* CTA band */}
@@ -301,7 +313,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }

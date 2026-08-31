@@ -23,7 +23,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <img src={logo} alt="Vehiglass" className="h-14 w-auto" />
             </button>
             <p className="text-[var(--vg-t3)] text-sm leading-relaxed">
-              Votre spécialiste en vitrage automobile. Remplacement, réparation et rénovation pour tous types de véhicules.
+              Votre spécialiste en vitrage automobile à Pau et dans la région. Remplacement, réparation et rénovation pour tous types de véhicules.
             </p>
           </div>
 

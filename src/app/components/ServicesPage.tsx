@@ -14,21 +14,21 @@ const vitragesServices = [
     desc: "Remplacement complet de votre pare-brise avec des vitrages homologués. Pose avec mastic polyuréthane haute résistance.",
     features: ["Toutes marques et modèles", "Verre homologué constructeur", "Calibrage caméra inclus si nécessaire", "Garantie 2 ans"],
     img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
-    alt: "Remplacement pare-brise",
+    alt: "Remplacement de pare-brise sur véhicule à Pau",
   },
   {
     title: "Glaces latérales",
     desc: "Remplacement de vos vitres de portières, vitres de custode ou de déflecteur. Vitrages trempés ou feuilletés selon spécification constructeur.",
     features: ["Vitres avant et arrière", "Compatibles lève-glaces", "Joints et agrafes inclus", "Intervention rapide"],
     img: "https://images.unsplash.com/photo-1773900225803-657359a1312a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Glace latérale voiture",
+    alt: "Glace latérale de voiture du garage à Pau",
   },
   {
     title: "Lunette arrière",
     desc: "Remplacement de la lunette arrière avec ou sans dégivrage intégré. Reconnexion du réseau chauffant incluse.",
     features: ["Dégivrage préservé", "Antenne intégrée si équipé", "Vitrage homologué", "Pose étanche garantie"],
     img: "https://images.unsplash.com/photo-1751615713841-6468b0a2441e?w=600&h=400&auto=format&fit=crop",
-    alt: "Lunette arrière automobile",
+    alt: "Lunette arrière automobile d'un véhicule à Pau",
   },
 ];
 
@@ -104,7 +104,7 @@ export function ServicesPage({ onNavigate, anchor }: ServicesPageProps) {
             Nos services
           </h1>
           <p className="text-[var(--vg-t3)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Des prestations complètes pour tous vos besoins en vitrage et optique automobile, réalisées par des techniciens certifiés.
+            Des prestations complètes pour tous vos besoins en vitrage et optique automobile, réalisées par des techniciens certifiés dans notre garage à Morlaàs, proche de Pau.
           </p>
         </div>
       </section>

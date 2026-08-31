@@ -80,7 +80,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             <div className="rounded-xl overflow-hidden bg-[var(--vg-input)] h-96">
               <img
                 src="https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=600&h=800&fit=crop&auto=format"
-                alt="Technicien Vehiglass au travail"
+                alt="Remplacement de pare-brise sur véhicule à Pau"
                 className="w-full h-full object-cover opacity-[var(--vg-img-op)]"
               />
             </div>
@@ -102,7 +102,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               <div className="rounded-xl overflow-hidden bg-[var(--vg-input)] h-80">
                 <img
                   src="https://images.unsplash.com/photo-1758767355046-1986dda2d967?w=600&h=500&fit=crop&auto=format"
-                  alt="Garage Vehiglass"
+                  alt="Garage Vehiglass à Pau"
                   className="w-full h-full object-cover opacity-[var(--vg-img-op)]"
                 />
               </div>
