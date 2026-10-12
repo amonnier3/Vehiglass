@@ -2,6 +2,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import logo from "../../imports/vehiglass_logo.png";
 import facebookIcon from "../../imports/facebook.svg";
 import instagramIcon from "../../imports/instagram.svg";
+import site from "../../content/site.json";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
@@ -23,7 +24,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <img src={logo} alt="Vehiglass" className="h-14 w-auto" />
             </button>
             <p className="text-[var(--vg-t3)] text-sm leading-relaxed">
-              Votre spécialiste en vitrage automobile à Pau et dans la région. Remplacement, réparation et rénovation pour tous types de véhicules.
+              {site.footer.description}
             </p>
           </div>
 
@@ -33,24 +34,17 @@ export function Footer({ onNavigate }: FooterProps) {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-[#ff6c1d] uppercase tracking-widest text-sm mb-4"
             >
-              Navigation
+              {site.footer.navigationTitle}
             </h4>
             <ul className="flex flex-col gap-2">
-              {(["home", "services", "about", "contact", "faq"] as Page[]).map((page) => {
-                const labels: Record<Page, string> = {
-                  home: "Accueil",
-                  services: "Services",
-                  about: "À propos",
-                  contact: "Contact",
-                  faq: "FAQ",
-                };
+              {site.navigation.items.map((item) => {
                 return (
-                  <li key={page}>
+                  <li key={item.id}>
                     <button
-                      onClick={() => onNavigate(page)}
+                      onClick={() => onNavigate(item.id as Page)}
                       className="text-[var(--vg-t3)] hover:text-[#ff6c1d] text-sm transition-colors"
                     >
-                      {labels[page]}
+                      {item.label}
                     </button>
                   </li>
                 );
@@ -64,28 +58,28 @@ export function Footer({ onNavigate }: FooterProps) {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-[#ff6c1d] uppercase tracking-widest text-sm mb-4"
             >
-              Contact
+              {site.footer.contactTitle}
             </h4>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <MapPin size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
-                12 Rue de l'Ayguelongue, 64160 Morlaàs
+                {site.contact.addressLines.join(", ")}
               </li>
               <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <Phone size={16} className="text-[#ff6c1d] shrink-0" />
-                06 58 13 04 52
+                {site.contact.phone}
               </li>
               <li className="flex items-start gap-3 text-sm text-[var(--vg-t3)]">
                 <Clock size={16} className="text-[#ff6c1d] mt-0.5 shrink-0" />
-                Lun – Ven : 10h – 19h
+                {site.footer.hours}
               </li>
               <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={instagramIcon} alt="Instagram Vehiglass" className="size-[16px]" />
-                vehiglass64
+                {site.contact.socialHandle}
               </li>
               <li className="flex items-center gap-3 text-sm text-[var(--vg-t3)]">
                 <img src={facebookIcon} alt="facebook Vehiglass" className="size-[16px]" />
-                vehiglass64
+                {site.contact.socialHandle}
               </li>
             </ul>
           </div>
@@ -93,10 +87,10 @@ export function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-[var(--vg-b1)] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-[var(--vg-t4)] text-xs">
-            © 2026 Vehiglass — Tous droits réservés
+            {site.footer.copyright}
           </p>
           <p className="text-[var(--vg-t4)] text-xs">
-            Spécialiste vitrage automobile
+            {site.footer.tagline}
           </p>
         </div>
       </div>

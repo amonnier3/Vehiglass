@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG } from "../../emailjs-config";
+import site from "../../content/site.json";
 
 export function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
@@ -84,7 +85,7 @@ export function ContactForm() {
 
             setMessage({
                 type: "success",
-                text: "Votre demande a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.",
+                text: site.contact.form.successMessage,
             });
             formRef.current?.reset();
             setFileName("");
@@ -92,7 +93,7 @@ export function ContactForm() {
             console.error("Erreur EmailJS:", error);
             setMessage({
                 type: "error",
-                text: "Erreur lors de l'envoi du formulaire. Veuillez réessayer.",
+                text: site.contact.form.errorMessage,
             });
         } finally {
             setIsLoading(false);
@@ -104,25 +105,25 @@ export function ContactForm() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                        Prénom
+                        {site.contact.form.firstNameLabel}
                     </label>
                     <input
                         type="text"
                         name="firstName"
                         required
-                        placeholder="Marc"
+                        placeholder={site.contact.form.firstNamePlaceholder}
                         className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
                     />
                 </div>
                 <div>
                     <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                        Nom
+                        {site.contact.form.lastNameLabel}
                     </label>
                     <input
                         type="text"
                         name="lastName"
                         required
-                        placeholder="Dupont"
+                        placeholder={site.contact.form.lastNamePlaceholder}
                         className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
                     />
                 </div>
@@ -130,63 +131,57 @@ export function ContactForm() {
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Email
+                    {site.contact.form.emailLabel}
                 </label>
                 <input
                     type="email"
                     name="email"
                     required
-                    placeholder="votre@email.com"
+                    placeholder={site.contact.form.emailPlaceholder}
                     className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
                 />
             </div>
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Téléphone
+                    {site.contact.form.phoneLabel}
                 </label>
                 <input
                     type="tel"
                     name="phone"
-                    placeholder="06 12 34 56 78"
+                    placeholder={site.contact.form.phonePlaceholder}
                     className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
                 />
             </div>
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Type de véhicule
+                    {site.contact.form.vehicleLabel}
                 </label>
                 <input
                     type="text"
                     name="vehicleType"
-                    placeholder="Ex : Renault Clio 2021"
+                    placeholder={site.contact.form.vehiclePlaceholder}
                     className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors"
                 />
             </div>
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Service souhaité
+                    {site.contact.form.serviceLabel}
                 </label>
                 <select
                     name="service"
                     className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm focus:outline-none focus:border-[#ff6c1d] transition-colors"
                 >
-                    <option value="">Sélectionner un service</option>
-                    <option>Remplacement pare-brise</option>
-                    <option>Remplacement glace latérale</option>
-                    <option>Remplacement lunette arrière</option>
-                    <option>Rénovation phares</option>
-                    <option>Remplacement phares</option>
-                    <option>Calibrage ADAS</option>
-                    <option>Autre</option>
+                    <option value="">{site.contact.form.servicePlaceholder}</option>
+                    {site.contact.form.serviceOptions.map((service) => <option key={service}>{service}</option>)}
                 </select>
             </div>
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Carte grise (image)
+                    {site.contact.form.imageLabel}
                 </label>
                 <div className="relative">
                     <input
@@ -198,18 +193,18 @@ export function ContactForm() {
                     />
                 </div>
                 {fileName && (
-                    <p className="text-xs text-[#ff6c1d] mt-1.5">✓ Fichier sélectionné: {fileName}</p>
+                    <p className="text-xs text-[#ff6c1d] mt-1.5">{site.contact.form.selectedFilePrefix} {fileName}</p>
                 )}
             </div>
 
             <div>
                 <label className="block text-[var(--vg-t3)] text-xs uppercase tracking-wide mb-1.5">
-                    Message (optionnel)
+                    {site.contact.form.messageLabel}
                 </label>
                 <textarea
                     name="message"
                     rows={3}
-                    placeholder="Décrivez votre situation..."
+                    placeholder={site.contact.form.messagePlaceholder}
                     className="w-full px-4 py-2.5 rounded-lg bg-[var(--vg-input)] border border-[var(--vg-b1)] text-[var(--vg-t1)] text-sm placeholder:opacity-40 focus:outline-none focus:border-[#ff6c1d] transition-colors resize-none"
                 />
             </div>
@@ -230,7 +225,7 @@ export function ContactForm() {
                 disabled={isLoading}
                 className="w-full py-3 rounded-lg bg-[#ff6c1d] text-white font-semibold hover:bg-[#ff8a47] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 group mt-2"
             >
-                {isLoading ? "Envoi en cours..." : "Envoyer ma demande"}
+                {isLoading ? site.contact.form.loadingButton : site.contact.form.submitButton}
                 {!isLoading && <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />}
             </button>
         </form>

@@ -1,15 +1,6 @@
 import { Phone, MapPin, Clock, Mail, ArrowRight, Facebook, Instagram, ThumbsUp } from "lucide-react";
 import { ContactForm } from "./ContactForm";
-
-const hours = [
-  { day: "Lundi", time: "10h00 – 19h00" },
-  { day: "Mardi", time: "10h00 – 19h00" },
-  { day: "Mercredi", time: "10h00 – 19h00" },
-  { day: "Jeudi", time: "10h00 – 19h00" },
-  { day: "Vendredi", time: "10h00 – 19h00" },
-  { day: "Samedi", time: "Fermé" },
-  { day: "Dimanche", time: "Fermé" },
-];
+import site from "../../content/site.json";
 
 const dayMap: Record<string, string> = {
   Monday: "Lundi",
@@ -47,15 +38,15 @@ export function ContactPage() {
       <section className="py-20 bg-[var(--vg-alt)] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 lg:px-10 text-center">
-          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Nous joindre</p>
+          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">{site.contact.eyebrow}</p>
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="text-5xl md:text-7xl text-[var(--vg-t1)] uppercase mb-6"
           >
-            Contact
+            {site.contact.title}
           </h1>
           <p className="text-[var(--vg-t3)] text-lg max-w-xl mx-auto leading-relaxed">
-            Une question, un devis, une urgence ? Notre équipe est à votre écoute.
+            {site.contact.intro}
           </p>
         </div>
       </section>
@@ -67,50 +58,50 @@ export function ContactPage() {
           <div className="flex flex-col gap-6">
             {/* Phone CTA */}
             <div className="p-8 rounded-xl bg-[#ff6c1d]/10 border border-[#ff6c1d]/30">
-              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Appel direct</p>
+              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">{site.contact.directCallLabel}</p>
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-[#ff6c1d] flex items-center justify-center shrink-0">
                   <Phone size={20} className="text-white" strokeWidth={2.5} />
                 </div>
                 <div>
                   <a
-                    href="tel:0478123456"
+                    href={`tel:${site.contact.phoneLink}`}
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                     className="text-4xl text-[var(--vg-t1)] hover:text-[#ff6c1d] transition-colors"
                   >
-                    06 58 13 04 52
+                    {site.contact.phone}
                   </a>
-                  <p className="text-[var(--vg-t3)] text-sm">Appel gratuit, pas de surcoût</p>
+                  <p className="text-[var(--vg-t3)] text-sm">{site.contact.phoneNote}</p>
                 </div>
               </div>
               <p className="text-[var(--vg-t3)] text-sm">
-                Disponible du lundi au vendredi de 10h à 19h.
+                {site.contact.availability}
               </p>
             </div>
 
             {/* Address */}
-            <InfoCard icon={<MapPin size={18} className="text-[#ff6c1d]" />} title="Adresse">
+            <InfoCard icon={<MapPin size={18} className="text-[#ff6c1d]" />} title={site.contact.addressTitle}>
               <p className="text-[var(--vg-t2)] text-sm leading-relaxed">
-                12 Rue de l'Ayguelongue<br />64160 Morlaàs
+                {site.contact.addressLines[0]}<br />{site.contact.addressLines[1]}
               </p>
-              <a href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
-                Ouvrir dans Google Maps
+              <a href={site.contact.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm mt-3 hover:text-[#ff8a47] transition-colors group">
+                {site.contact.mapsLabel}
                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
             </InfoCard>
 
             {/* Email */}
-            <InfoCard icon={<Mail size={18} className="text-[#ff6c1d]" />} title="Email">
-              <a href="mailto:vehiglass64@gmail.com" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
-                vehiglass64@gmail.com
+            <InfoCard icon={<Mail size={18} className="text-[#ff6c1d]" />} title={site.contact.emailTitle}>
+              <a href={`mailto:${site.contact.email}`} className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors">
+                {site.contact.email}
               </a>
-              <p style={{ color: "var(--vg-t3)" }} className="text-xs mt-1">Réponse sous 24h en jours ouvrés</p>
+              <p style={{ color: "var(--vg-t3)" }} className="text-xs mt-1">{site.contact.emailNote}</p>
             </InfoCard>
 
             {/* Hours */}
-            <InfoCard icon={<Clock size={18} className="text-[#ff6c1d]" />} title="Horaires d'ouverture">
+            <InfoCard icon={<Clock size={18} className="text-[#ff6c1d]" />} title={site.contact.hoursTitle}>
               <div className="flex flex-col gap-1.5 mt-1">
-                {hours.map((h) => {
+                {site.contact.hours.map((h) => {
                   const isToday = h.day === todayFr;
                   return (
                     <div
@@ -133,15 +124,15 @@ export function ContactPage() {
             </InfoCard>
 
             {/* Réseaux sociaux */}
-            <InfoCard icon={<ThumbsUp size={18} className="text-[#ff6c1d]" />} title="Réseaux sociaux">
+            <InfoCard icon={<ThumbsUp size={18} className="text-[#ff6c1d]" />} title={site.contact.socialTitle}>
               <div className="flex items-center gap-4 mt-2">
-                <a href="https://www.facebook.com/vehiglass64" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors flex items-center gap-1">
+                <a href={site.contact.facebookUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors flex items-center gap-1">
                   <Facebook />
-                  vehiglass64
+                  {site.contact.socialHandle}
                 </a>
-                <a href="https://www.instagram.com/vehiglass64" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors flex items-center gap-1">
+                <a href={site.contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--vg-t2)] hover:text-[#ff6c1d] transition-colors flex items-center gap-1">
                   <Instagram />
-                  vehiglass64
+                  {site.contact.socialHandle}
                 </a>
               </div>
             </InfoCard>
@@ -162,26 +153,26 @@ export function ContactPage() {
                 </div>
                 <div className="text-center">
                   <p style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-xl text-[var(--vg-t1)] uppercase">
-                    Vehiglass
+                    {site.contact.mapName}
                   </p>
-                  <p className="text-sm text-[var(--vg-t3)]">12 Rue de l'Ayguelongue, 64160 Morlaàs</p>
+                  <p className="text-sm text-[var(--vg-t3)]">{site.contact.addressLines.join(", ")}</p>
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA"
+                  href={site.contact.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-md bg-[#ff6c1d] text-white text-sm font-semibold hover:bg-[#ff8a47] transition-colors"
                 >
-                  Voir sur la carte
+                  {site.contact.mapButton}
                 </a>
               </div>
             </div>
 
             {/* Contact form */}
             <div className="p-8 rounded-xl border border-[var(--vg-b1)] bg-[var(--vg-card)]">
-              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Formulaire</p>
+              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">{site.contact.formEyebrow}</p>
               <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-3xl text-[var(--vg-t1)] uppercase mb-6">
-                Demande de rendez-vous
+                {site.contact.formTitle}
               </h3>
 
               <ContactForm />

@@ -1,0 +1,519 @@
+{
+    "navigation": {
+        "items": [
+            {
+                "id": "home",
+                "label": "Accueil"
+            },
+            {
+                "id": "services",
+                "label": "Services"
+            },
+            {
+                "id": "about",
+                "label": "À propos"
+            },
+            {
+                "id": "contact",
+                "label": "Contact"
+            },
+            {
+                "id": "faq",
+                "label": "FAQ"
+            }
+        ],
+        "contactCta": "Nous contacter"
+    },
+    "home": {
+        "heroBadge": "Spécialiste vitrage automobile",
+        "heroTitle": "La clarté,",
+        "heroTitleAccent": "notre métier.",
+        "heroDescription": "Vehiglass vous accompagne pour tout remplacement ou réparation de vitrage automobile. Intervention rapide et qualitative.",
+        "appointmentCta": "Prendre rendez-vous",
+        "servicesCta": "Voir nos services",
+        "scrollLabel": "Défiler",
+        "stats": [
+            {
+                "value": "100€",
+                "label": "Offert pour tout remplacement de pare-brise*"
+            },
+            {
+                "value": "100%",
+                "label": "Taux de satisfaction"
+            },
+            {
+                "value": "0€",
+                "label": "Franchise offerte*"
+            },
+            {
+                "value": "2h",
+                "label": "Délai d'intervention moyen"
+            }
+        ],
+        "statsDisclaimer": "*Voir condition avec le garage",
+        "engagementsEyebrow": "Nos engagements",
+        "engagementsTitle": "Ce qui nous distingue",
+        "engagements": [
+            {
+                "title": "Expertise certifiée",
+                "desc": "Techniciens formés et certifiés aux dernières normes de pose vitrage automobile."
+            },
+            {
+                "title": "Intervention rapide",
+                "desc": "Remplacement réalisé en moins de 2 heures. Prise en charge le jour même selon disponibilité."
+            },
+            {
+                "title": "Garantie 2 ans",
+                "desc": "Chaque prestation est garantie 2 ans, pièces et main d'œuvre incluses."
+            },
+            {
+                "title": "Prise en charge assurance",
+                "desc": "Nous gérons directement les démarches avec votre assureur pour vous simplifier la vie."
+            }
+        ],
+        "servicesEyebrow": "Ce que nous faisons",
+        "servicesTitle": "Nos prestations",
+        "servicesViewAll": "Voir tous les services",
+        "serviceCards": [
+            {
+                "title": "Vitrages automobiles",
+                "desc": "Pare-brise, glaces latérales, lunette arrière — remplacement toutes marques.",
+                "alt": "Remplacement de vitrage automobile à Pau",
+                "anchor": "#vitrages",
+                "imageUrl": "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop"
+            },
+            {
+                "title": "Rénovation de phares",
+                "desc": "Polissage et restauration des optiques pour retrouver éclat et sécurité.",
+                "alt": "Rénovation de phare automobile à Pau",
+                "anchor": "#optiques",
+                "imageUrl": "https://images.unsplash.com/photo-1528964132366-4409d2d4a862?w=600&h=400&fit=crop&auto=format"
+            },
+            {
+                "title": "Services complémentaires",
+                "desc": "Calibrage ADAS, traitement hydrophobe, télépeage et bien plus.",
+                "alt": "Services complémentaires du garage à Pau",
+                "anchor": "#complementaires",
+                "imageUrl": "https://images.unsplash.com/photo-1771340012319-0b4fca008b54?w=600&h=400&fit=crop&auto=format"
+            }
+        ],
+        "testimonialsEyebrow": "Avis clients",
+        "testimonialsTitle": "Ils nous font confiance",
+        "testimonials": [
+            {
+                "name": "Clément B.",
+                "rating": 5,
+                "text": "Très aimable et très bonne prestation, je recommande fortement. Merci pour l'accueil et le service."
+            },
+            {
+                "name": "Jamal E. T.",
+                "rating": 5,
+                "text": "Relation client impeccable, niveau réactivité rien à dire. Je recommande vivement !"
+            },
+            {
+                "name": "Valérie V.",
+                "rating": 5,
+                "text": "Très bonne prestation pour un changement de pare-brise, je recommande ce technicien."
+            }
+        ],
+        "reviewCta": "Laisser un avis Google",
+        "finalCtaTitle": "Un vitrage endommagé ? Agissez vite.",
+        "finalCtaDescription": "Ne roulez pas avec un pare-brise fissuré. Contactez-nous dès aujourd'hui pour un devis gratuit et une intervention rapide.",
+        "finalCtaButton": "Demander un devis gratuit"
+    },
+    "about": {
+        "eyebrow": "Notre histoire",
+        "title": "À propos",
+        "intro": "Une passion pour l'automobile et un engagement envers la qualité depuis plus de 10 ans.",
+        "founderEyebrow": "Le fondateur",
+        "founderName": "Charles Thébaud",
+        "founderParagraphs": [
+            "Passionné d'automobile depuis mon plus jeune âge, je débute ma carrière comme technicien vitrage en 2017 dans une grande enseigne nationale. Fort de 7 années d'expérience terrain, ainsi qu'une expérience de 2 ans en tant qu'expert automobile, je décide en 2025 de créer Vehiglass, avec l'ambition d'offrir un service de proximité alliant qualité professionnelle et relation humaine.",
+            "Ma philosophie est simple : traiter chaque véhicule comme s'il était le mien, et chaque client comme un ami à qui je donne la meilleure qualité de service.",
+            "Certifié par le GNFA, je suis formé régulièrement aux nouvelles technologies du vitrage embarqué : systèmes ADAS, caméras intégrées, connectivité numérique."
+        ],
+        "certifications": [
+            "Certification GNFA vitrage automobile",
+            "10+ années d'expertise sectorielle"
+        ],
+        "experienceValue": "10+",
+        "experienceLabel": "années d'expérience",
+        "garageEyebrow": "Notre atelier",
+        "garageTitle": "Le garage",
+        "garageParagraphs": [
+            "Implanté à Morlaas, zone de Berlanne, depuis 2025, mon atelier de 200 m² est équipé des derniers outils de pose et de calibrage.",
+            "Notre stock de vitrages couvre plus de 3 000 références — des modèles courants aux véhicules de collection, en passant également par les véhicules poids lourd et l'agricole."
+        ],
+        "garageStats": [
+            {
+                "value": "200 m²",
+                "label": "Surface atelier"
+            },
+            {
+                "value": "3 000+",
+                "label": "Références en stock"
+            }
+        ],
+        "valuesEyebrow": "Ce qui nous guide",
+        "valuesTitle": "Nos valeurs",
+        "values": [
+            {
+                "title": "Excellence",
+                "desc": "Chaque intervention est réalisée avec rigueur, en respectant les préconisations constructeur."
+            },
+            {
+                "title": "Proximité",
+                "desc": "Un interlocuteur dédié, des explications claires, une transparence totale sur les prix."
+            },
+            {
+                "title": "Expertise",
+                "desc": "Formation continue de notre équipe aux évolutions technologiques du vitrage automobile."
+            }
+        ],
+        "ctaTitle": "Venez nous rencontrer",
+        "ctaDescription": "Notre équipe est disponible du lundi au vendredi pour répondre à vos questions.",
+        "ctaButton": "Voir nos coordonnées"
+    },
+    "services": {
+        "eyebrow": "Notre savoir-faire",
+        "title": "Nos services",
+        "intro": "Des prestations complètes pour tous vos besoins en vitrage et optique automobile, réalisées par des techniciens certifiés dans notre garage à Morlaàs, proche de Pau.",
+        "categoryLabel": "Catégorie",
+        "categories": [
+            {
+                "number": "01",
+                "title": "Vitrages",
+                "id": "vitrages",
+                "items": [
+                    {
+                        "title": "Remplacement de pare-brise",
+                        "desc": "Remplacement complet de votre pare-brise avec des vitrages homologués. Pose avec mastic polyuréthane haute résistance.",
+                        "features": [
+                            "Toutes marques et modèles",
+                            "Verre homologué constructeur",
+                            "Calibrage caméra inclus si nécessaire",
+                            "Garantie 2 ans"
+                        ],
+                        "alt": "Remplacement de pare-brise sur véhicule à Pau",
+                        "imageUrl": "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
+                        "icon": ""
+                    },
+                    {
+                        "title": "Glaces latérales",
+                        "desc": "Remplacement de vos vitres de portières, vitres de custode ou de déflecteur. Vitrages trempés ou feuilletés selon spécification constructeur.",
+                        "features": [
+                            "Vitres avant et arrière",
+                            "Compatibles lève-glaces",
+                            "Joints et agrafes inclus",
+                            "Intervention rapide"
+                        ],
+                        "alt": "Glace latérale de voiture du garage à Pau",
+                        "imageUrl": "https://images.unsplash.com/photo-1773900225803-657359a1312a?q=80&w=1170&auto=format&fit=crop",
+                        "icon": ""
+                    },
+                    {
+                        "title": "Lunette arrière",
+                        "desc": "Remplacement de la lunette arrière avec ou sans dégivrage intégré. Reconnexion du réseau chauffant incluse.",
+                        "features": [
+                            "Dégivrage préservé",
+                            "Antenne intégrée si équipé",
+                            "Vitrage homologué",
+                            "Pose étanche garantie"
+                        ],
+                        "alt": "Lunette arrière automobile d'un véhicule à Pau",
+                        "imageUrl": "https://images.unsplash.com/photo-1751615713841-6468b0a2441e?w=600&h=400&auto=format&fit=crop",
+                        "icon": ""
+                    }
+                ]
+            },
+            {
+                "number": "02",
+                "title": "Optiques",
+                "id": "optiques",
+                "items": [
+                    {
+                        "title": "Rénovation de phares",
+                        "desc": "Polissage et rénovation complète de vos optiques jaunies ou rayées. Résultat comme neuf, visibilité retrouvée.",
+                        "features": [
+                            "Polissage multi-étapes",
+                            "Protection UV appliquée",
+                            "Durée : 1h par phare",
+                            "Résultat garanti 12 mois"
+                        ],
+                        "alt": "Rénovation phare automobile",
+                        "imageUrl": "https://images.unsplash.com/photo-1528964132366-4409d2d4a862?w=600&h=400&fit=crop&auto=format",
+                        "icon": ""
+                    },
+                    {
+                        "title": "Remplacement d'optiques",
+                        "desc": "Si vos phares sont trop endommagés pour être rénovés, nous procédons au remplacement complet par des pièces d'origine ou équivalentes.",
+                        "features": [
+                            "Pièces d'origine ou OEM",
+                            "Réglage des feux inclus",
+                            "Conformité au contrôle technique",
+                            "Toutes technologies (LED, Xénon, Halogène)"
+                        ],
+                        "alt": "Remplacement phare voiture",
+                        "imageUrl": "https://images.unsplash.com/photo-1616761879141-f485e5fed5df?w=600&h=400&fit=crop&auto=format",
+                        "icon": ""
+                    }
+                ]
+            },
+            {
+                "number": "03",
+                "title": "Services complémentaires",
+                "id": "complementaires",
+                "items": [
+                    {
+                        "icon": "🔧",
+                        "title": "Calibrage ADAS",
+                        "desc": "Recalibrage des systèmes d'aide à la conduite après remplacement de pare-brise.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    },
+                    {
+                        "icon": "💧",
+                        "title": "Traitement hydrophobe",
+                        "desc": "Application d'un traitement hydrophobe pour améliorer la visibilité par temps de pluie.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    },
+                    {
+                        "icon": "📡",
+                        "title": "Pose de télépeage",
+                        "desc": "Installation professionnelle de badge télépéage sur votre pare-brise.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    },
+                    {
+                        "icon": "📱",
+                        "title": "Pose de CarPlay",
+                        "desc": "Installation professionnelle de CarPlay sans fil ou filaire sur votre pare-brise.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    },
+                    {
+                        "icon": "🔍",
+                        "title": "Diagnostic vitrage",
+                        "desc": "Évaluation complète de l'état de vos vitrages, gratuitement.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    },
+                    {
+                        "icon": "🚗",
+                        "title": "Véhicule de courtoisie",
+                        "desc": "Mise à disposition d'un véhicule de courtoisie gratuit pendant l'intervention.",
+                        "features": [],
+                        "alt": "",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ],
+        "appointmentButton": "Obtenir un rendez-vous",
+        "quoteButton": "Demander un devis",
+        "ctaTitle": "Besoin d'un service sur mesure ?",
+        "ctaDescription": "Contactez-nous pour discuter de votre besoin. Devis gratuit et sans engagement.",
+        "ctaButton": "Nous contacter"
+    },
+    "contact": {
+        "eyebrow": "Nous joindre",
+        "title": "Contact",
+        "intro": "Une question, un devis, une urgence ? Notre équipe est à votre écoute.",
+        "directCallLabel": "Appel direct",
+        "phone": "06 58 13 04 52",
+        "phoneLink": "+33658130452",
+        "phoneNote": "Appel gratuit, pas de surcoût",
+        "availability": "Disponible du lundi au vendredi de 10h à 19h.",
+        "addressTitle": "Adresse",
+        "addressLines": [
+            "12 Rue de l'Ayguelongue",
+            "64160 Morlaàs"
+        ],
+        "mapsLabel": "Ouvrir dans Google Maps",
+        "mapsUrl": "https://maps.app.goo.gl/4Sc5FgvrzVbiv6BMA",
+        "emailTitle": "Email",
+        "email": "vehiglass64@gmail.com",
+        "emailNote": "Réponse sous 24h en jours ouvrés",
+        "hoursTitle": "Horaires d'ouverture",
+        "hours": [
+            {
+                "day": "Lundi",
+                "time": "10h00 – 19h00"
+            },
+            {
+                "day": "Mardi",
+                "time": "10h00 – 19h00"
+            },
+            {
+                "day": "Mercredi",
+                "time": "10h00 – 19h00"
+            },
+            {
+                "day": "Jeudi",
+                "time": "10h00 – 19h00"
+            },
+            {
+                "day": "Vendredi",
+                "time": "10h00 – 19h00"
+            },
+            {
+                "day": "Samedi",
+                "time": "Fermé"
+            },
+            {
+                "day": "Dimanche",
+                "time": "Fermé"
+            }
+        ],
+        "socialTitle": "Réseaux sociaux",
+        "socialHandle": "vehiglass64",
+        "facebookUrl": "https://www.facebook.com/vehiglass64",
+        "instagramUrl": "https://www.instagram.com/vehiglass64",
+        "mapName": "Vehiglass",
+        "mapButton": "Voir sur la carte",
+        "formEyebrow": "Formulaire",
+        "formTitle": "Demande de rendez-vous",
+        "form": {
+            "firstNameLabel": "Prénom",
+            "firstNamePlaceholder": "Marc",
+            "lastNameLabel": "Nom",
+            "lastNamePlaceholder": "Dupont",
+            "emailLabel": "Email",
+            "emailPlaceholder": "votre@email.com",
+            "phoneLabel": "Téléphone",
+            "phonePlaceholder": "06 12 34 56 78",
+            "vehicleLabel": "Type de véhicule",
+            "vehiclePlaceholder": "Ex : Renault Clio 2021",
+            "serviceLabel": "Service souhaité",
+            "servicePlaceholder": "Sélectionner un service",
+            "serviceOptions": [
+                "Remplacement pare-brise",
+                "Remplacement glace latérale",
+                "Remplacement lunette arrière",
+                "Rénovation phares",
+                "Remplacement phares",
+                "Calibrage ADAS",
+                "Autre"
+            ],
+            "imageLabel": "Carte grise (image)",
+            "selectedFilePrefix": "✓ Fichier sélectionné:",
+            "messageLabel": "Message (optionnel)",
+            "messagePlaceholder": "Décrivez votre situation...",
+            "submitButton": "Envoyer ma demande",
+            "loadingButton": "Envoi en cours...",
+            "successMessage": "Votre demande a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.",
+            "errorMessage": "Erreur lors de l'envoi du formulaire. Veuillez réessayer."
+        }
+    },
+    "faq": {
+        "eyebrow": "Questions fréquentes",
+        "title": "FAQ",
+        "intro": "Retrouvez les réponses aux questions les plus fréquemment posées par nos clients.",
+        "themesLabel": "Thèmes",
+        "categories": [
+            {
+                "category": "Généralités",
+                "items": [
+                    {
+                        "question": "Quels types de véhicules prenez-vous en charge ?",
+                        "answer": "Nous intervenons sur tous types de véhicules : voitures de tourisme, SUV, monospaces, utilitaires légers, camionnettes, véhicules de collection, ainsi que certains poids lourds. Contactez-nous pour votre cas spécifique."
+                    },
+                    {
+                        "question": "Proposez-vous un véhicule de courtoisie pendant l'intervention ?",
+                        "answer": "Oui, nous mettons à disposition un véhicule de courtoisie gratuit sous réserve de disponibilité. Merci de nous en faire la demande lors de la prise de rendez-vous."
+                    },
+                    {
+                        "question": "Combien de temps dure un remplacement de pare-brise ?",
+                        "answer": "Un remplacement de pare-brise standard dure entre 1h30 et 2h00. Pour les véhicules équipés de caméras ADAS nécessitant un calibrage, compter environ 3h au total."
+                    }
+                ]
+            },
+            {
+                "category": "Vitrage",
+                "items": [
+                    {
+                        "question": "Puis-je conduire immédiatement après le remplacement de mon pare-brise ?",
+                        "answer": "Non. Après la pose, un temps de séchage du mastic polyuréthane est impératif. Pour un pare-brise standard, comptez 1h minimum avant toute conduite, et évitez les autoroutes dans les 24 heures suivant la pose."
+                    },
+                    {
+                        "question": "Dois-je remplacer mon pare-brise si j'ai un impact sans fissure ?",
+                        "answer": "Pas nécessairement. Une petite étoile ou un impact sans propagation peut souvent être réparé par injection de résine, à condition que l'impact soit inférieur à 1 euro de diamètre et hors champ du conducteur. Nous évaluons gratuitement la réparabilité."
+                    },
+                    {
+                        "question": "Mon pare-brise est-il d'origine constructeur ?",
+                        "answer": "Nous proposons deux niveaux de qualité : des vitrages d'origine constructeur (OEM) et des vitrages équivalents homologués de marques premium (Saint-Gobain, AGC, Pilkington). Les deux répondent aux normes ECE R43."
+                    },
+                    {
+                        "question": "Le remplacement de vitrage affecte-t-il la garantie de mon véhicule ?",
+                        "answer": "Non, si la pose est réalisée par un professionnel certifié et avec des pièces homologuées."
+                    }
+                ]
+            },
+            {
+                "category": "Assurance",
+                "items": [
+                    {
+                        "question": "Mon assurance prend-elle en charge le remplacement de pare-brise ?",
+                        "answer": "Si vous avez souscrit à une garantie bris de glace, le remplacement est généralement pris en charge sans franchise. Nous gérons directement les démarches avec votre assureur : Macif, MAIF, AXA, Allianz, GMF, MAAF et tous les principaux réseaux."
+                    },
+                    {
+                        "question": "Comment se déroule la prise en charge par l'assurance ?",
+                        "answer": "Appelez-nous en indiquant votre assureur. Nous ouvrons le dossier sinistre directement en votre nom, réalisons l'intervention et facturons directement l'assurance. Vous n'avez rien à avancer en cas de garantie bris de glace sans franchise."
+                    },
+                    {
+                        "question": "Est-ce que le remplacement de vitrage fait perdre mon bonus ?",
+                        "answer": "Non. Le recours à votre garantie bris de glace n'affecte pas votre coefficient de bonus-malus. Cette garantie est indépendante de votre responsabilité civile."
+                    }
+                ]
+            },
+            {
+                "category": "Phares & Optiques",
+                "items": [
+                    {
+                        "question": "Mes phares sont jaunes et opaques, que pouvez-vous faire ?",
+                        "answer": "Nous proposons une rénovation par polissage multi-étapes qui élimine les couches oxydées et restaure la transparence. Le résultat est visible immédiatement. Une protection UV est ensuite appliquée pour prolonger l'effet jusqu'à 3 ans."
+                    },
+                    {
+                        "question": "La rénovation de phares est-elle durable ?",
+                        "answer": "Avec notre technique et l'application d'un vernis protecteur UV, la rénovation tient 2 à 3 ans selon les conditions d'utilisation. Les phares exposés au soleil intense vieillissent plus vite."
+                    },
+                    {
+                        "question": "Le contrôle technique accepte-t-il des phares rénovés ?",
+                        "answer": "Oui, à condition que la transparence et l'homogénéité de l'optique soient correctement rétablies. Notre prestation garantit la conformité au contrôle technique."
+                    }
+                ]
+            },
+            {
+                "category": "ADAS",
+                "items": [
+                    {
+                        "question": "Qu'est-ce qu'une caméra ADAS et pourquoi doit-elle être calibrée ?",
+                        "answer": "ADAS signifie Advanced Driver Assistance Systems : ce sont les systèmes d'aide à la conduite (freinage automatique, maintien de voie, etc.) qui utilisent une caméra souvent fixée sur le pare-brise. Lors d'un remplacement, la caméra est légèrement déplacée, ce qui désynchronise ses angles de vision. Le calibrage remet à zéro ces paramètres."
+                    },
+                    {
+                        "question": "Comment savoir si mon véhicule est équipé d'un système ADAS ?",
+                        "answer": "La plupart des véhicules récents (à partir de 2015 environ) en sont équipés. Vous pouvez repérer la présence d'une caméra dans le rétroviseur intérieur, ou retrouver ces informations dans votre carnet de bord. Nous vérifions systématiquement cela lors de votre prise de rendez-vous."
+                    }
+                ]
+            }
+        ],
+        "notFoundPrompt": "Vous n'avez pas trouvé la réponse à votre question ?",
+        "contactCta": "Nous contacter",
+        "ctaTitle": "Encore des doutes ?",
+        "ctaDescription": "Appelez-nous directement au 06 58 13 04 52 ou venez nous voir au garage. Nos techniciens répondent à toutes vos questions sans engagement."
+    },
+    "footer": {
+        "description": "Votre spécialiste en vitrage automobile à Pau et dans la région. Remplacement, réparation et rénovation pour tous types de véhicules.",
+        "navigationTitle": "Navigation",
+        "contactTitle": "Contact",
+        "hours": "Lun – Ven : 10h – 19h",
+        "copyright": "© 2026 Vehiglass — Tous droits réservés",
+        "tagline": "Spécialiste vitrage automobile"
+    }
+}

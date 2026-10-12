@@ -1,0 +1,588 @@
+content:
+  - name: site
+    label: Contenu du site
+    type: file
+    path: src/content/site.json
+    format: json
+    fields:
+      - name: navigation
+        label: Navigation
+        type: object
+        fields:
+          - name: items
+            label: Liens du menu
+            type: object
+            list:
+              min: 5
+              max: 5
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: id
+                label: Identifiant de page (ne pas modifier)
+                type: string
+                readonly: true
+              - name: label
+                label: Libellé
+                type: string
+          - name: contactCta
+            label: Bouton de contact
+            type: string
+
+      - name: home
+        label: Page d’accueil
+        type: object
+        fields:
+          - name: heroBadge
+            label: Accroche au-dessus du titre
+            type: string
+          - name: heroTitle
+            label: Titre principal (partie 1)
+            type: string
+          - name: heroTitleAccent
+            label: Titre principal (partie en couleur)
+            type: string
+          - name: heroDescription
+            label: Texte d’introduction
+            type: text
+          - name: appointmentCta
+            label: Bouton de prise de rendez-vous
+            type: string
+          - name: servicesCta
+            label: Bouton vers les services
+            type: string
+          - name: scrollLabel
+            label: Indication de défilement
+            type: string
+          - name: stats
+            label: Chiffres clés
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{value} — {label}"
+            fields:
+              - name: value
+                label: Chiffre
+                type: string
+              - name: label
+                label: Explication
+                type: string
+          - name: statsDisclaimer
+            label: Note sous les chiffres
+            type: string
+          - name: engagementsEyebrow
+            label: Petite accroche des engagements
+            type: string
+          - name: engagementsTitle
+            label: Titre des engagements
+            type: string
+          - name: engagements
+            label: Engagements
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Titre
+                type: string
+              - name: desc
+                label: Description
+                type: text
+          - name: servicesEyebrow
+            label: Petite accroche des prestations
+            type: string
+          - name: servicesTitle
+            label: Titre des prestations
+            type: string
+          - name: servicesViewAll
+            label: Lien vers tous les services
+            type: string
+          - name: serviceCards
+            label: Cartes de prestations
+            type: object
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Titre
+                type: string
+              - name: desc
+                label: Description
+                type: text
+              - name: alt
+                label: Texte alternatif de l’image (ne change pas l’image)
+                type: string
+              - name: imageUrl
+                type: string
+                hidden: true
+                readonly: true
+              - name: anchor
+                label: Lien de section (ne pas modifier)
+                type: string
+                readonly: true
+          - name: testimonialsEyebrow
+            label: Petite accroche des avis
+            type: string
+          - name: testimonialsTitle
+            label: Titre des avis
+            type: string
+          - name: testimonials
+            label: Avis clients
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Nom affiché
+                type: string
+              - name: rating
+                label: Note sur 5
+                type: number
+                options:
+                  min: 1
+                  max: 5
+              - name: text
+                label: Texte de l’avis
+                type: text
+          - name: reviewCta
+            label: Bouton d’avis Google
+            type: string
+          - name: finalCtaTitle
+            label: Titre de l’appel à l’action
+            type: string
+          - name: finalCtaDescription
+            label: Texte de l’appel à l’action
+            type: text
+          - name: finalCtaButton
+            label: Bouton de l’appel à l’action
+            type: string
+
+      - name: about
+        label: Page À propos
+        type: object
+        fields:
+          - name: eyebrow
+            label: Petite accroche
+            type: string
+          - name: title
+            label: Titre de page
+            type: string
+          - name: intro
+            label: Introduction
+            type: text
+          - name: founderEyebrow
+            label: Petite accroche du portrait
+            type: string
+          - name: founderName
+            label: Nom du fondateur
+            type: string
+          - name: founderParagraphs
+            label: Texte de présentation
+            type: text
+            list: true
+          - name: certifications
+            label: Certifications et expertise
+            type: string
+            list: true
+          - name: experienceValue
+            label: Chiffre d’expérience
+            type: string
+          - name: experienceLabel
+            label: Texte sous le chiffre
+            type: string
+          - name: garageEyebrow
+            label: Petite accroche de l’atelier
+            type: string
+          - name: garageTitle
+            label: Titre de l’atelier
+            type: string
+          - name: garageParagraphs
+            label: Description de l’atelier
+            type: text
+            list: true
+          - name: garageStats
+            label: Chiffres de l’atelier
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{value} — {label}"
+            fields:
+              - name: value
+                label: Chiffre
+                type: string
+              - name: label
+                label: Explication
+                type: string
+          - name: valuesEyebrow
+            label: Petite accroche des valeurs
+            type: string
+          - name: valuesTitle
+            label: Titre des valeurs
+            type: string
+          - name: values
+            label: Valeurs de l’entreprise
+            type: object
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Valeur
+                type: string
+              - name: desc
+                label: Description
+                type: text
+          - name: ctaTitle
+            label: Titre de l’appel à l’action
+            type: string
+          - name: ctaDescription
+            label: Texte de l’appel à l’action
+            type: text
+          - name: ctaButton
+            label: Bouton de l’appel à l’action
+            type: string
+
+      - name: services
+        label: Page Services
+        type: object
+        fields:
+          - name: eyebrow
+            label: Petite accroche
+            type: string
+          - name: title
+            label: Titre de page
+            type: string
+          - name: intro
+            label: Introduction
+            type: text
+          - name: categoryLabel
+            label: Libellé devant le numéro de catégorie
+            type: string
+          - name: categories
+            label: Catégories de services
+            type: object
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: number
+                label: Numéro de catégorie (ne pas modifier)
+                type: string
+                readonly: true
+              - name: title
+                label: Nom de la catégorie
+                type: string
+              - name: id
+                label: Identifiant de section (ne pas modifier)
+                type: string
+                readonly: true
+              - name: items
+                label: Prestations de cette catégorie
+                type: object
+                list:
+                  min: 1
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Nom de la prestation
+                    type: string
+                  - name: desc
+                    label: Description
+                    type: text
+                  - name: alt
+                    label: Texte alternatif de l’image (ne change pas l’image)
+                    type: string
+                  - name: imageUrl
+                    type: string
+                    hidden: true
+                    readonly: true
+                  - name: features
+                    label: Points forts
+                    type: string
+                    list: true
+                  - name: icon
+                    label: Icône emoji (services complémentaires)
+                    type: string
+          - name: appointmentButton
+            label: Bouton de rendez-vous
+            type: string
+          - name: quoteButton
+            label: Bouton de devis
+            type: string
+          - name: ctaTitle
+            label: Titre de l’appel à l’action
+            type: string
+          - name: ctaDescription
+            label: Texte de l’appel à l’action
+            type: text
+          - name: ctaButton
+            label: Bouton de l’appel à l’action
+            type: string
+
+      - name: contact
+        label: Page Contact et coordonnées
+        type: object
+        fields:
+          - name: eyebrow
+            label: Petite accroche
+            type: string
+          - name: title
+            label: Titre de page
+            type: string
+          - name: intro
+            label: Introduction
+            type: text
+          - name: directCallLabel
+            label: Titre du bloc téléphone
+            type: string
+          - name: phone
+            label: Téléphone affiché
+            type: string
+          - name: phoneLink
+            label: Téléphone pour le lien d’appel, avec indicatif
+            type: string
+          - name: phoneNote
+            label: Note sous le téléphone
+            type: string
+          - name: availability
+            label: Disponibilité par téléphone
+            type: string
+          - name: addressTitle
+            label: Titre de l’adresse
+            type: string
+          - name: addressLines
+            label: Adresse (une ligne par champ)
+            type: string
+            list:
+              min: 2
+              max: 2
+          - name: mapsLabel
+            label: Lien vers Google Maps
+            type: string
+          - name: mapsUrl
+            label: Adresse web Google Maps
+            type: string
+          - name: emailTitle
+            label: Titre de l’email
+            type: string
+          - name: email
+            label: Adresse email
+            type: string
+          - name: emailNote
+            label: Note sous l’email
+            type: string
+          - name: hoursTitle
+            label: Titre des horaires
+            type: string
+          - name: hours
+            label: Horaires d’ouverture
+            type: object
+            list:
+              min: 7
+              max: 7
+              collapsible:
+                collapsed: true
+                summary: "{day} : {time}"
+            fields:
+              - name: day
+                label: Jour
+                type: string
+              - name: time
+                label: Horaires ou « Fermé »
+                type: string
+          - name: socialTitle
+            label: Titre des réseaux sociaux
+            type: string
+          - name: socialHandle
+            label: Nom affiché sur les réseaux
+            type: string
+          - name: facebookUrl
+            label: Lien Facebook
+            type: string
+          - name: instagramUrl
+            label: Lien Instagram
+            type: string
+          - name: mapName
+            label: Nom affiché sur la carte
+            type: string
+          - name: mapButton
+            label: Bouton de carte
+            type: string
+          - name: formEyebrow
+            label: Petite accroche du formulaire
+            type: string
+          - name: formTitle
+            label: Titre du formulaire
+            type: string
+          - name: form
+            label: Champs du formulaire
+            type: object
+            fields:
+              - name: firstNameLabel
+                label: Libellé du prénom
+                type: string
+              - name: firstNamePlaceholder
+                label: Exemple pour le prénom
+                type: string
+              - name: lastNameLabel
+                label: Libellé du nom
+                type: string
+              - name: lastNamePlaceholder
+                label: Exemple pour le nom
+                type: string
+              - name: emailLabel
+                label: Libellé de l’email
+                type: string
+              - name: emailPlaceholder
+                label: Exemple pour l’email
+                type: string
+              - name: phoneLabel
+                label: Libellé du téléphone
+                type: string
+              - name: phonePlaceholder
+                label: Exemple pour le téléphone
+                type: string
+              - name: vehicleLabel
+                label: Libellé du véhicule
+                type: string
+              - name: vehiclePlaceholder
+                label: Exemple de véhicule
+                type: string
+              - name: serviceLabel
+                label: Libellé de la prestation
+                type: string
+              - name: servicePlaceholder
+                label: Invite de sélection
+                type: string
+              - name: serviceOptions
+                label: Prestations proposées dans le formulaire
+                type: string
+                list: true
+              - name: imageLabel
+                label: Libellé de la pièce jointe
+                type: string
+              - name: selectedFilePrefix
+                label: Texte avant le nom du fichier sélectionné
+                type: string
+              - name: messageLabel
+                label: Libellé du message
+                type: string
+              - name: messagePlaceholder
+                label: Exemple de message
+                type: string
+              - name: submitButton
+                label: Bouton d’envoi
+                type: string
+              - name: loadingButton
+                label: Bouton pendant l’envoi
+                type: string
+              - name: successMessage
+                label: Message après envoi réussi
+                type: text
+              - name: errorMessage
+                label: Message après erreur
+                type: text
+
+      - name: faq
+        label: Page FAQ
+        type: object
+        fields:
+          - name: eyebrow
+            label: Petite accroche
+            type: string
+          - name: title
+            label: Titre de page
+            type: string
+          - name: intro
+            label: Introduction
+            type: text
+          - name: themesLabel
+            label: Titre de la liste des thèmes
+            type: string
+          - name: categories
+            label: Catégories et questions
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{category}"
+            fields:
+              - name: category
+                label: Nom de la catégorie
+                type: string
+              - name: items
+                label: Questions et réponses
+                type: object
+                list:
+                  min: 1
+                  collapsible:
+                    collapsed: true
+                    summary: "{question}"
+                fields:
+                  - name: question
+                    label: Question
+                    type: string
+                  - name: answer
+                    label: Réponse
+                    type: text
+          - name: notFoundPrompt
+            label: Message si la réponse manque
+            type: string
+          - name: contactCta
+            label: Bouton de contact
+            type: string
+          - name: ctaTitle
+            label: Titre du bandeau final
+            type: string
+          - name: ctaDescription
+            label: Texte du bandeau final
+            type: text
+
+      - name: footer
+        label: Pied de page
+        type: object
+        fields:
+          - name: description
+            label: Description de l’entreprise
+            type: text
+          - name: navigationTitle
+            label: Titre de navigation
+            type: string
+          - name: contactTitle
+            label: Titre du bloc contact
+            type: string
+          - name: hours
+            label: Résumé des horaires
+            type: string
+          - name: copyright
+            label: Mention de copyright
+            type: string
+          - name: tagline
+            label: Signature
+            type: string

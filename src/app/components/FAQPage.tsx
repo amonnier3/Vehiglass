@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ArrowRight } from "lucide-react";
+import site from "../../content/site.json";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
@@ -120,8 +121,8 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function FAQPage({ onNavigate }: FAQPageProps) {
-  const [activeCategory, setActiveCategory] = useState("Généralités");
-  const current = faqCategories.find((c) => c.category === activeCategory) ?? faqCategories[0];
+  const [activeCategory, setActiveCategory] = useState(site.faq.categories[0].category);
+  const current = site.faq.categories.find((c) => c.category === activeCategory) ?? site.faq.categories[0];
 
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif" }} className="pt-16">
@@ -129,15 +130,15 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
       <section className="py-20 bg-[var(--vg-alt)] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#033eff]/20 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 lg:px-10 text-center">
-          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">Questions fréquentes</p>
+          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-4">{site.faq.eyebrow}</p>
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="text-5xl md:text-7xl text-[var(--vg-t1)] uppercase mb-6"
           >
-            FAQ
+            {site.faq.title}
           </h1>
           <p className="text-[var(--vg-t3)] text-lg max-w-xl mx-auto leading-relaxed">
-            Retrouvez les réponses aux questions les plus fréquemment posées par nos clients.
+            {site.faq.intro}
           </p>
         </div>
       </section>
@@ -151,10 +152,10 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-[var(--vg-t3)] uppercase tracking-widest text-xs mb-4"
             >
-              Thèmes
+              {site.faq.themesLabel}
             </p>
             <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
-              {faqCategories.map((cat) => (
+              {site.faq.categories.map((cat) => (
                 <button
                   key={cat.category}
                   onClick={() => setActiveCategory(cat.category)}
@@ -171,13 +172,13 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
 
             <div className="hidden lg:block mt-10 p-5 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]">
               <p className="text-[var(--vg-t3)] text-sm leading-relaxed mb-4">
-                Vous n'avez pas trouvé la réponse à votre question ?
+                {site.faq.notFoundPrompt}
               </p>
               <button
                 onClick={() => onNavigate("contact")}
                 className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm hover:text-[#ff8a47] transition-colors group"
               >
-                Nous contacter
+                {site.faq.contactCta}
                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
@@ -204,12 +205,12 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
             </div>
 
             <div className="lg:hidden mt-8 p-5 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]">
-              <p className="text-[var(--vg-t3)] text-sm mb-3">Vous n'avez pas trouvé la réponse à votre question ?</p>
+              <p className="text-[var(--vg-t3)] text-sm mb-3">{site.faq.notFoundPrompt}</p>
               <button
                 onClick={() => onNavigate("contact")}
                 className="inline-flex items-center gap-1.5 text-[#ff6c1d] text-sm hover:text-[#ff8a47] transition-colors group"
               >
-                Nous contacter
+                {site.faq.contactCta}
                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
@@ -221,10 +222,10 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
       <section className="py-16 bg-gradient-to-br from-[#033eff] to-[#ff6c1d]">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif" }} className="text-4xl md:text-5xl text-white uppercase mb-4">
-            Encore des doutes ?
+            {site.faq.ctaTitle}
           </h2>
           <p className="text-blue-200 mb-8 text-base max-w-xl mx-auto">
-            Appelez-nous directement au <strong>06 58 13 04 52</strong> ou venez nous voir au garage. Nos techniciens répondent à toutes vos questions sans engagement.
+            {site.faq.ctaDescription}
           </p>
           <button
             onClick={() => onNavigate("contact")}

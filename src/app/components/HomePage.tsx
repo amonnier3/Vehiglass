@@ -1,4 +1,5 @@
 import { CheckCircle, ArrowRight, Star, Award, Clock, Users } from "lucide-react";
+import site from "../../content/site.json";
 
 type Page = "home" | "services" | "about" | "contact" | "faq";
 
@@ -6,52 +7,11 @@ interface HomePageProps {
   onNavigate: (page: Page, anchor?: string) => void;
 }
 
-const engagements = [
-  {
-    icon: <Award size={24} className="text-[#ff6c1d]" />,
-    title: "Expertise certifiée",
-    desc: "Techniciens formés et certifiés aux dernières normes de pose vitrage automobile.",
-  },
-  {
-    icon: <Clock size={24} className="text-[#ff6c1d]" />,
-    title: "Intervention rapide",
-    desc: "Remplacement réalisé en moins de 2 heures. Prise en charge le jour même selon disponibilité.",
-  },
-  {
-    icon: <CheckCircle size={24} className="text-[#ff6c1d]" />,
-    title: "Garantie 2 ans",
-    desc: "Chaque prestation est garantie 2 ans, pièces et main d'œuvre incluses.",
-  },
-  {
-    icon: <Users size={24} className="text-[#ff6c1d]" />,
-    title: "Prise en charge assurance",
-    desc: "Nous gérons directement les démarches avec votre assureur pour vous simplifier la vie.",
-  },
-];
-
-const stats = [
-  { value: "100€", label: "Offert pour tout remplacement de pare-brise*" },
-  { value: "100%", label: "Taux de satisfaction" },
-  { value: "0€", label: "Franchise offerte*" },
-  { value: "2h", label: "Délai d'intervention moyen" },
-];
-
-const testimonials = [
-  {
-    name: "Clément B.",
-    rating: 5,
-    text: "Très aimable et très bonne prestation, je recommande fortement. Merci pour l'accueil et le service.",
-  },
-  {
-    name: "Jamal E. T.",
-    rating: 5,
-    text: "Relation client impeccable, niveau réactivité rien à dire. Je recommande vivement !",
-  },
-  {
-    name: "Valérie V.",
-    rating: 5,
-    text: "Très bonne prestation pour un changement de pare-brise,  je recommande ce technicien.",
-  },
+const engagementIcons = [
+  <Award size={24} className="text-[#ff6c1d]" />,
+  <Clock size={24} className="text-[#ff6c1d]" />,
+  <CheckCircle size={24} className="text-[#ff6c1d]" />,
+  <Users size={24} className="text-[#ff6c1d]" />,
 ];
 
 export function HomePage({ onNavigate }: HomePageProps) {
@@ -78,20 +38,19 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="relative z-10 max-w-5xl mx-auto px-5 lg:px-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#ff6c1d]/40 bg-[#ff6c1d]/10 text-[#ff6c1d] text-xs tracking-widest uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#ff6c1d] animate-pulse" />
-            Spécialiste vitrage automobile
+            {site.home.heroBadge}
           </div>
 
           <h1
             style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.02em" }}
             className="text-5xl md:text-7xl lg:text-8xl text-white uppercase mb-6 leading-none"
           >
-            La clarté,{" "}
-            <span className="text-[#ff6c1d]">notre métier.</span>
+            {site.home.heroTitle}{" "}
+            <span className="text-[#ff6c1d]">{site.home.heroTitleAccent}</span>
           </h1>
 
           <p className="text-[#a0bcd4] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Vehiglass vous accompagne pour tout remplacement ou réparation de vitrage automobile.
-            Intervention rapide et qualitative.
+            {site.home.heroDescription}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -99,20 +58,20 @@ export function HomePage({ onNavigate }: HomePageProps) {
               onClick={() => onNavigate("contact")}
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-[#ff6c1d] text-white font-semibold hover:bg-[#ff8a47] transition-all duration-200 group"
             >
-              Prendre rendez-vous
+              {site.home.appointmentCta}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => onNavigate("services")}
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/25 text-[#e8edf5] hover:border-[#ff6c1d]/60 hover:text-[#ff6c1d] transition-all duration-200"
             >
-              Voir nos services
+              {site.home.servicesCta}
             </button>
           </div>
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#7a9bbf] text-xs">
-          <span className="tracking-widest uppercase">Défiler</span>
+          <span className="tracking-widest uppercase">{site.home.scrollLabel}</span>
           <div className="w-px h-8 bg-gradient-to-b from-[#ff6c1d]/60 to-transparent" />
         </div>
       </section>
@@ -121,7 +80,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-14 bg-[var(--vg-stats)] border-y border-[var(--vg-stats-b)]">
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
+            {site.home.stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
@@ -134,29 +93,29 @@ export function HomePage({ onNavigate }: HomePageProps) {
             ))}
           </div>
         </div>
-        <span className="text-[var(--vg-t3)] text-sm absolute right-[1rem] mt-[2rem]">*Voir condition avec le garage</span>
+        <span className="text-[var(--vg-t3)] text-sm absolute right-[1rem] mt-[2rem]">{site.home.statsDisclaimer}</span>
       </section>
 
       {/* Engagements & valeurs */}
       <section className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
         <div className="text-center mb-14">
-          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Nos engagements</p>
+          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">{site.home.engagementsEyebrow}</p>
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
           >
-            Ce qui nous distingue
+            {site.home.engagementsTitle}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {engagements.map((item) => (
+          {site.home.engagements.map((item, index) => (
             <div
               key={item.title}
               className="flex gap-5 p-6 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)] hover:border-[#ff6c1d]/30 transition-all duration-200 group"
             >
               <div className="w-12 h-12 rounded-lg bg-[#ff6c1d]/10 flex items-center justify-center shrink-0 group-hover:bg-[#ff6c1d]/20 transition-colors">
-                {item.icon}
+                {engagementIcons[index]}
               </div>
               <div>
                 <h3
@@ -177,47 +136,25 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-5 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
-              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Ce que nous faisons</p>
+              <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">{site.home.servicesEyebrow}</p>
               <h2
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
               >
-                Nos prestations
+                {site.home.servicesTitle}
               </h2>
             </div>
             <button
               onClick={() => onNavigate("services")}
               className="inline-flex items-center gap-2 text-[#ff6c1d] text-sm hover:text-[#ff8a47] transition-colors group shrink-0"
             >
-              Voir tous les services
+              {site.home.servicesViewAll}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                img: "https://images.unsplash.com/photo-1618934116136-16d28f184b10?w=600&h=400&auto=format&fit=crop",
-                title: "Vitrages automobiles",
-                desc: "Pare-brise, glaces latérales, lunette arrière — remplacement toutes marques.",
-                alt: "Remplacement de vitrage automobile à Pau",
-                anchor: "#vitrages"
-              },
-              {
-                img: "https://images.unsplash.com/photo-1528964132366-4409d2d4a862?w=600&h=400&fit=crop&auto=format",
-                title: "Rénovation de phares",
-                desc: "Polissage et restauration des optiques pour retrouver éclat et sécurité.",
-                alt: "Rénovation de phare automobile à Pau",
-                anchor: "#optiques"
-              },
-              {
-                img: "https://images.unsplash.com/photo-1771340012319-0b4fca008b54?w=600&h=400&fit=crop&auto=format",
-                title: "Services complémentaires",
-                desc: "Calibrage ADAS, traitement hydrophobe, télépeage et bien plus.",
-                alt: "Services complémentaires du garage à Pau",
-                anchor: "#complementaires"
-              },
-            ].map((card) => (
+            {site.home.serviceCards.map((card) => (
               <button
                 key={card.title}
                 onClick={() => onNavigate("services", card.anchor)}
@@ -225,7 +162,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               >
                 <div className="relative h-48 overflow-hidden bg-[var(--vg-input)]">
                   <img
-                    src={card.img}
+                    src={card.imageUrl}
                     alt={card.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-[var(--vg-img-op)] group-hover:opacity-100"
                   />
@@ -249,17 +186,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
       {/* Testimonials */}
       <section className="py-20 max-w-7xl mx-auto px-5 lg:px-10">
         <div className="text-center mb-14">
-          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">Avis clients</p>
+          <p className="text-[#ff6c1d] uppercase tracking-widest text-xs mb-3">{site.home.testimonialsEyebrow}</p>
           <h2
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="text-4xl md:text-5xl text-[var(--vg-t1)] uppercase"
           >
-            Ils nous font confiance
+            {site.home.testimonialsTitle}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+          {site.home.testimonials.map((t) => (
             <div
               key={t.name}
               className="p-6 rounded-xl bg-[var(--vg-card)] border border-[var(--vg-b1)]"
@@ -287,7 +224,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-[var(--primary)] bg-white/5 text-[var(--primary)] font-semibold hover:border-[var(--primary)]/60 hover:bg-[var(--primary)]/5 transition-colors group"
           >
-            Laisser un avis Google
+            {site.home.reviewCta}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -300,16 +237,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="text-4xl md:text-5xl text-white uppercase mb-4"
           >
-            Un vitrage endommagé ? Agissez vite.
+            {site.home.finalCtaTitle}
           </h2>
           <p className="text-blue-200 mb-8 text-base max-w-xl mx-auto leading-relaxed">
-            Ne roulez pas avec un pare-brise fissuré. Contactez-nous dès aujourd'hui pour un devis gratuit et une intervention rapide.
+            {site.home.finalCtaDescription}
           </p>
           <button
             onClick={() => onNavigate("contact")}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-[#ff6c1d] text-white font-semibold hover:bg-[#ff8a47] transition-colors group"
           >
-            Demander un devis gratuit
+            {site.home.finalCtaButton}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
