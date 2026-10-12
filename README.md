@@ -1,7 +1,6 @@
 
+  <img src="public/favicon.png" alt="Logo Vehiglass" width="48" align="right">
   # Vehiglass Website
-
-  ![Logo Vehiglass](public/favicon.png)
 
   This is a code bundle for Vehiglass Website.
 
